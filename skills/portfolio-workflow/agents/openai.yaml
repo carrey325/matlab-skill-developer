@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Workflow"
+  short_description: "Plan and review portfolio optimization decisions"
+  default_prompt: "Use $portfolio-workflow to plan this portfolio optimization and produce an implementation brief."

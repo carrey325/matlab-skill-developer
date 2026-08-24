@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Compact Credit Scorecard"
+  short_description: "Implement compact scorecard scoring and validation"
+  default_prompt: "Use $matlab-compact-credit-scorecard to implement a selected compact scorecard operation."

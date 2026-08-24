@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB VaR and ES Backtesting"
+  short_description: "Implement selected VaR and ES backtests"
+  default_prompt: "Use $matlab-var-es-backtesting to implement a selected MATLAB VaR or ES backtest."

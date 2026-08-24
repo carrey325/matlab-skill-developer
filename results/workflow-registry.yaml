@@ -1,0 +1,682 @@
+schema_version: 1.1.0
+release_policy: Only packages that pass workflow-specific professional and structural release gates appear
+  here.
+workflows:
+- name: develop-lifetime-pd-workflow
+  family: credit-risk
+  professional_purpose: Develop, developer-validate, select, package, and design monitoring for a lifetime
+    probability-of-default model.
+  trigger_use_cases:
+  - lifetime PD development
+  - ECL parameter-model development
+  - model redevelopment
+  upstream_dependencies: []
+  downstream_dependencies:
+  - estimate-lifetime-ecl-workflow
+  - assess-credit-portfolio-risk-workflow
+  - validate-credit-risk-model-workflow
+  - monitor-credit-risk-model-workflow
+  required_capabilities:
+  - fit-lifetime-pd
+  - predict-pd
+  - calibrate-pd
+  - discriminate-pd
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-lifetime-pd-models
+    coverage: EXACT
+  known_capability_gaps:
+  - automated stability and monitoring implementation
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: develop-lgd-workflow
+  family: credit-risk
+  professional_purpose: Develop and developer-test an LGD model using explicit economic-loss, recovery,
+    cure, censoring, downturn, segmentation, calibration, and use decisions.
+  trigger_use_cases:
+  - A model owner must turn defaulted-exposure recovery experience into an LGD model package for a declared
+    portfolio and use.
+  upstream_dependencies:
+  - develop-lifetime-pd-workflow
+  - develop-ead-workflow
+  - estimate-lifetime-ecl-workflow
+  - validate-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-APPLICABILITY
+  - CAP-BASIS
+  - CAP-CASHFLOW
+  - CAP-CURE
+  - CAP-WINDOW
+  - CAP-DOWNTURN
+  - CAP-SEGMENT
+  - CAP-FAMILY
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-lgd-models
+    coverage: EXACT
+  - provider: matlab
+    skill: matlab-lgd-models
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Workout cash-flow construction, cure outcome preparation, downturn transformation, and automated stability
+    monitoring remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: develop-ead-workflow
+  family: credit-risk
+  professional_purpose: Develop and developer-test EAD or conversion-factor models with explicit exposure,
+    product, horizon, limit, utilisation, boundary, calibration, and use decisions.
+  trigger_use_cases:
+  - A model owner must estimate exposure at default from facility balances, limits, drawings, repayments,
+    and product behaviour.
+  upstream_dependencies:
+  - develop-lifetime-pd-workflow
+  - develop-lgd-workflow
+  - estimate-lifetime-ecl-workflow
+  - validate-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-APPLICABILITY
+  - CAP-EXPOSURE
+  - CAP-PRODUCT
+  - CAP-CCF
+  - CAP-WINDOW
+  - CAP-LIMIT
+  - CAP-FAMILY
+  - CAP-BOUNDS
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-ead-models
+    coverage: EXACT
+  - provider: matlab
+    skill: matlab-ead-models
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Product-specific history construction, dynamic limits, cancellation modelling, and monitoring automation
+    remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: develop-credit-scorecard-workflow
+  family: credit-risk
+  professional_purpose: Develop an interpretable credit scorecard with explicit target-population, reject-inference,
+    binning, monotonicity, selection, scaling, cutoff-boundary, validation, and use decisions.
+  trigger_use_cases:
+  - A model owner needs an interpretable points-based credit-risk ranking model for a defined population
+    and decision-support use.
+  upstream_dependencies:
+  - develop-credit-default-model-workflow
+  - develop-lifetime-pd-workflow
+  - validate-credit-risk-model-workflow
+  - monitor-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-PURPOSE
+  - CAP-POPULATION
+  - CAP-REJECT
+  - CAP-BINNING
+  - CAP-MONOTONICITY
+  - CAP-VARIABLES
+  - CAP-SCALING
+  - CAP-CUTOFF
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-scorecard-modeling
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-compact-credit-scorecard
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-model-governance
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Reject-inference governance, production cutoff approval, fairness review, and automated drift monitoring
+    remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: develop-credit-default-model-workflow
+  family: credit-risk
+  professional_purpose: Develop a non-lifetime binary or multi-state credit default model with explicit
+    target taxonomy, horizon, data structure, model-family, imbalance, interpretability, benchmarking,
+    and disposition decisions.
+  trigger_use_cases:
+  - A model owner needs a binary, ordinal, nominal, or nonlinear credit-risk model for a declared prediction
+    and decision-support use.
+  upstream_dependencies:
+  - develop-credit-scorecard-workflow
+  - develop-lifetime-pd-workflow
+  - model-credit-rating-transitions-workflow
+  - validate-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-TARGET
+  - CAP-HORIZON
+  - CAP-STRUCTURE
+  - CAP-DATA
+  - CAP-FAMILY
+  - CAP-IMBALANCE
+  - CAP-INTERPRET
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-multinomial-modeling
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-default-deep-learning
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-model-governance
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Architecture search, imbalance remedies, explainability evidence, and cross-family benchmark automation
+    remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: validate-credit-risk-model-workflow
+  family: credit-risk
+  professional_purpose: Independently validate a credit-risk model through scope, independence, conceptual
+    soundness, data and implementation verification, benchmarking, outcomes analysis, limitations, and
+    disposition decisions.
+  trigger_use_cases:
+  - A new model, material change, periodic review, or serious monitoring finding requires an independent
+    validation opinion.
+  upstream_dependencies:
+  - develop-lifetime-pd-workflow
+  - develop-lgd-workflow
+  - develop-ead-workflow
+  - monitor-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-SCOPE
+  - CAP-INDEPENDENCE
+  - CAP-CONCEPT
+  - CAP-IMPLEMENTATION
+  - CAP-BENCHMARK
+  - CAP-OUTCOMES
+  - CAP-LIMITATIONS
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-model-governance
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lifetime-pd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lgd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-ead-models
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Independent reproducibility harnesses, challenger construction, implementation reconciliation, and
+    finding workflow automation remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: monitor-credit-risk-model-workflow
+  family: credit-risk
+  professional_purpose: Monitor an approved credit-risk model using controlled baselines, policy thresholds,
+    drift diagnosis, performance evidence, overrides, change assessment, and explicit continue, limit,
+    recalibrate, redevelop, or escalate decisions.
+  trigger_use_cases:
+  - A scheduled monitoring cycle, threshold breach, data change, implementation change, or external event
+    requires a documented model-use decision.
+  upstream_dependencies:
+  - validate-credit-risk-model-workflow
+  - develop-lifetime-pd-workflow
+  - develop-lgd-workflow
+  - develop-ead-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-BASELINE
+  - CAP-THRESHOLD
+  - CAP-DRIFT
+  - CAP-PERFORMANCE
+  - CAP-OVERRIDE
+  - CAP-CHANGE
+  - CAP-USE
+  - CAP-ESCALATION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-model-governance
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lifetime-pd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lgd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-ead-models
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Population drift, trigger registry, alerting, override analytics, and controlled recalibration pipelines
+    remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: estimate-lifetime-ecl-workflow
+  family: credit-risk
+  professional_purpose: Estimate expected credit loss by selecting the governing regime, loss horizon,
+    staging or scope treatment, governed PD/LGD/EAD inputs, scenarios, discounting, overlays, aggregation,
+    reconciliation, and disposition.
+  trigger_use_cases:
+  - An accountable reporting or risk owner requires an expected-credit-loss estimate from approved exposure
+    and credit-parameter inputs.
+  upstream_dependencies:
+  - develop-lifetime-pd-workflow
+  - develop-lgd-workflow
+  - develop-ead-workflow
+  - validate-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-REGIME
+  - CAP-SCOPE
+  - CAP-STAGE
+  - CAP-PARAMETERS
+  - CAP-SCENARIO
+  - CAP-DISCOUNT
+  - CAP-OVERLAY
+  - CAP-AGGREGATE
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-lifetime-ecl
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lifetime-pd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lgd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-ead-models
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - SICR and staging policy, CECL segmentation, scenario governance, overlays, accounting reconciliation,
+    and disclosure automation remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: assess-credit-portfolio-risk-workflow
+  family: credit-risk
+  professional_purpose: Assess portfolio credit loss, tail risk, concentration, risk contributions, and
+    economic capital through explicit loss-mode, horizon, dependence, input, simulation, attribution,
+    and reporting decisions.
+  trigger_use_cases:
+  - A portfolio risk owner needs loss distribution, concentration, contribution, or economic-capital evidence
+    from governed credit inputs.
+  upstream_dependencies:
+  - develop-lifetime-pd-workflow
+  - develop-lgd-workflow
+  - develop-ead-workflow
+  - model-credit-rating-transitions-workflow
+  - stress-test-credit-portfolio-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-MODE
+  - CAP-HORIZON
+  - CAP-INPUTS
+  - CAP-DEPENDENCE
+  - CAP-CONCENTRATION
+  - CAP-CONVERGENCE
+  - CAP-CAPITAL
+  - CAP-ATTRIBUTION
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-portfolio-risk
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Dependence calibration, portfolio ingestion, valuation under migration, independent validation, and
+    limit-integration automation remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: stress-test-credit-portfolio-workflow
+  family: credit-risk
+  professional_purpose: Stress-test a credit portfolio by selecting purpose and scenarios, translating
+    macro paths into credit parameters, applying exposure assumptions, measuring concentration and sensitivities,
+    and escalating material limitations or outcomes.
+  trigger_use_cases:
+  - A risk owner has approved baseline and adverse scenarios and needs their portfolio loss and risk impacts
+    assessed.
+  upstream_dependencies:
+  - assess-credit-portfolio-risk-workflow
+  - develop-lifetime-pd-workflow
+  - develop-lgd-workflow
+  - develop-ead-workflow
+  - analyze-climate-risk-scenarios-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-PURPOSE
+  - CAP-SCENARIO
+  - CAP-TRANSLATION
+  - CAP-PARAMETERS
+  - CAP-BALANCE
+  - CAP-CONCENTRATION
+  - CAP-SENSITIVITY
+  - CAP-ESCALATION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-portfolio-risk
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lifetime-pd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-lgd-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-ead-models
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-climate-scenarios
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Macro-to-risk translation, scenario governance, dynamic balance-sheet projection, management actions,
+    and stress-result workflow automation remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: model-credit-rating-transitions-workflow
+  family: credit-risk
+  professional_purpose: Develop a rating-transition model by defining states, observation method, default
+    treatment, horizon conversion, sparse-cell treatment, smoothing, calibration, stress response, validation,
+    and use limitations.
+  trigger_use_cases:
+  - A risk owner requires a transition matrix or transition process for migration analysis, portfolio
+    risk, stress testing, or planning.
+  upstream_dependencies:
+  - develop-credit-default-model-workflow
+  - assess-credit-portfolio-risk-workflow
+  - stress-test-credit-portfolio-workflow
+  - build-credit-curves-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-STATES
+  - CAP-OBSERVATION
+  - CAP-DEFAULT
+  - CAP-HORIZON
+  - CAP-SPARSE
+  - CAP-CALIBRATION
+  - CAP-STRESS
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-curves-and-transitions
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-portfolio-risk
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Duration and generator estimation, withdrawal treatment, state taxonomy governance, and stressed transition
+    calibration remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: build-credit-curves-workflow
+  family: credit-risk
+  professional_purpose: Build and validate a market-implied default or hazard curve by selecting instruments,
+    conventions, recovery and discount inputs, calibration, interpolation, extrapolation, consistency
+    checks, and use limitations.
+  trigger_use_cases:
+  - A valuation or risk owner requires a calibrated credit curve from bonds, CDS, or other approved market
+    instruments.
+  upstream_dependencies:
+  - analyze-credit-default-swap-risk-workflow
+  - model-credit-rating-transitions-workflow
+  - estimate-structural-default-risk-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-PURPOSE
+  - CAP-INSTRUMENT
+  - CAP-CONVENTION
+  - CAP-RECOVERY
+  - CAP-DISCOUNT
+  - CAP-CALIBRATE
+  - CAP-INTERPOLATE
+  - CAP-CONSISTENCY
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-curves-and-transitions
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-default-swaps
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Market data ingestion, quote cleaning, convention registry, arbitrage diagnostics, and production
+    curve governance remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: estimate-structural-default-risk-workflow
+  family: credit-risk
+  professional_purpose: Estimate structural default risk by defining the liability boundary and horizon,
+    selecting point-in-time or time-series calibration, solving asset value and volatility, validating
+    market inputs, and reporting sensitivities and limitations.
+  trigger_use_cases:
+  - A risk analyst requires market-based distance-to-default or default-probability evidence for a corporate
+    issuer.
+  upstream_dependencies:
+  - build-credit-curves-workflow
+  - analyze-credit-default-swap-risk-workflow
+  - develop-credit-default-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-BOUNDARY
+  - CAP-HORIZON
+  - CAP-VOLATILITY
+  - CAP-CALIBRATE
+  - CAP-MARKET
+  - CAP-SENSITIVITY
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-structural-default-models
+    coverage: EXACT
+  - provider: matlab
+    skill: matlab-structural-default-models
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Market and liability data acquisition, capital-structure mapping, solver benchmarking, and structural-model
+    monitoring remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: analyze-credit-default-swap-risk-workflow
+  family: credit-risk
+  professional_purpose: Analyze CDS valuation and market-implied credit risk by fixing task boundaries,
+    contract conventions, discount and credit curves, recovery, calibration, sensitivities, reconciliation,
+    and reporting limitations without making trading or hedging decisions.
+  trigger_use_cases:
+  - A valuation or risk analyst needs a CDS price, spread, or market-implied credit-risk assessment from
+    an identified contract and market snapshot.
+  upstream_dependencies:
+  - build-credit-curves-workflow
+  - estimate-structural-default-risk-workflow
+  - assess-credit-portfolio-risk-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-PURPOSE
+  - CAP-CONTRACT
+  - CAP-CURVES
+  - CAP-RECOVERY
+  - CAP-CALIBRATE
+  - CAP-SENSITIVITY
+  - CAP-RECONCILE
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-credit-default-swaps
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-curves-and-transitions
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Contract ingestion, market convention registry, quote validation, legal-event treatment, and independent
+    valuation controls remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: estimate-var-es-workflow
+  family: market-risk
+  professional_purpose: Estimate VaR and expected shortfall by defining the risk use and P&L, selecting
+    horizon and confidence, choosing historical, parametric, or simulation methods, treating nonlinear
+    and tail risks, aggregating exposures, diagnosing estimates, and setting use limitations.
+  trigger_use_cases:
+  - A market-risk owner requires VaR and/or ES estimates for a defined portfolio, horizon, confidence
+    level, and use.
+  upstream_dependencies:
+  - backtest-var-es-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-PURPOSE
+  - CAP-PNL
+  - CAP-HORIZON
+  - CAP-METHOD
+  - CAP-NONLINEAR
+  - CAP-TAIL
+  - CAP-AGGREGATE
+  - CAP-DIAGNOSTIC
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-var-es-estimation
+    coverage: EXACT
+  - provider: matlab
+    skill: matlab-var-es-estimation
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Position and market-data ingestion, full revaluation, risk-factor mapping, P&L controls, and production
+    aggregation remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: backtest-var-es-workflow
+  family: market-risk
+  professional_purpose: Independently backtest VaR and ES forecasts by reconciling P&L and forecast timing,
+    selecting exception and statistical tests, assessing sample and serial dependence, applying applicable
+    traffic-light policy, testing ES severity, diagnosing failures, and routing remediation.
+  trigger_use_cases:
+  - A controlled sequence of VaR/ES forecasts and realised P&L must be tested for reliability and governance
+    action.
+  upstream_dependencies:
+  - estimate-var-es-workflow
+  - validate-credit-risk-model-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-ALIGN
+  - CAP-EXCEPTIONS
+  - CAP-TESTS
+  - CAP-SAMPLE
+  - CAP-TRAFFIC
+  - CAP-ES
+  - CAP-DIAGNOSE
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-var-es-backtesting
+    coverage: EXACT
+  - provider: matlab
+    skill: matlab-var-es-backtesting
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - P&L reconciliation, policy-threshold registry, exception investigation workflow, and automatic escalation
+    remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released
+- name: analyze-climate-risk-scenarios-workflow
+  family: climate-risk
+  professional_purpose: Analyze climate scenarios by selecting purpose and source, distinguishing transition
+    and physical hazards, aligning horizons and regions, translating climate variables into financial
+    risk drivers, quantifying uncertainty, identifying provider gaps, and reporting resilient limitations.
+  trigger_use_cases:
+  - A risk, strategy, supervisory, or disclosure owner requires climate-scenario effects translated into
+    financial risk variables or portfolio impacts.
+  upstream_dependencies:
+  - stress-test-credit-portfolio-workflow
+  - assess-credit-portfolio-risk-workflow
+  downstream_dependencies: []
+  required_capabilities:
+  - CAP-PURPOSE
+  - CAP-SOURCE
+  - CAP-HAZARD
+  - CAP-HORIZON
+  - CAP-MAP
+  - CAP-TRANSLATE
+  - CAP-UNCERTAINTY
+  - CAP-CAPABILITY
+  - CAP-DISPOSITION
+  - CAP-IMPLEMENT
+  - CAP-VALIDATE
+  - CAP-PACKAGE
+  matlab_provider_coverage:
+  - provider: matlab
+    skill: matlab-climate-scenarios
+    coverage: COMPOSITION
+  - provider: matlab
+    skill: matlab-credit-portfolio-risk
+    coverage: COMPOSITION
+  known_capability_gaps:
+  - Hazard and asset geospatial mapping, climate-to-PD/LGD/EAD translation, dynamic balance sheets, adaptation,
+    second-round effects, and uncertainty quantification remain GAPs.
+  evidence_version: 1.1.0
+  workflow_version: 1.1.0
+  release_status: released

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Structural Default Models"
+  short_description: "Implement selected Merton default-model calculations"
+  default_prompt: "Use $matlab-structural-default-models to implement a selected Merton default model."

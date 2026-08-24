@@ -1,0 +1,4 @@
+interface:
+  display_name: "Credit Model Governance"
+  short_description: "Implement selected credit fairness and explainability tasks."
+  default_prompt: "Use $matlab-credit-model-governance to implement this selected MATLAB credit-model governance task."

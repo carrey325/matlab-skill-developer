@@ -1,0 +1,111 @@
+schema_version: 1.1.0
+policy: This register recommends additions or refactors only. It never changes the read-only MATLAB skill repository.
+gaps:
+  - id: GAP-LGD-WORKOUT-DATA
+    missing_capability: Construct governed LGD default, recovery, cure, workout-period, and censoring datasets.
+    workflows: [develop-lgd-workflow, estimate-lifetime-ecl-workflow]
+    professional_importance: critical
+    recommended_action: New matlab-credit-loss-data-preparation skill or expansion of matlab-lgd-models with an explicitly selected data-contract implementation boundary.
+    priority: P1
+  - id: GAP-LGD-DOWNTURN
+    missing_capability: Apply selected downturn/stressed LGD transformation and evidence ledger.
+    workflows: [develop-lgd-workflow, stress-test-credit-portfolio-workflow, estimate-lifetime-ecl-workflow]
+    professional_importance: critical
+    recommended_action: Add selected stress/downturn transformation operations after policy selection; keep policy outside provider skill.
+    priority: P1
+  - id: GAP-EAD-CCF-DATA
+    missing_capability: Construct product-aware current-exposure, limit, undrawn amount, and credit-conversion-factor datasets.
+    workflows: [develop-ead-workflow, estimate-lifetime-ecl-workflow]
+    professional_importance: critical
+    recommended_action: New matlab-ead-data-preparation helper.
+    priority: P1
+  - id: GAP-MODEL-STABILITY
+    missing_capability: Implement selected population, feature, calibration, discrimination, and override stability metrics over time.
+    workflows: [develop-lifetime-pd-workflow, develop-lgd-workflow, develop-ead-workflow, develop-credit-scorecard-workflow, validate-credit-risk-model-workflow, monitor-credit-risk-model-workflow]
+    professional_importance: critical
+    recommended_action: New matlab-credit-model-monitoring-metrics helper with metric and threshold inputs selected upstream.
+    priority: P1
+  - id: GAP-MONITORING-ORCHESTRATION
+    missing_capability: Run scheduled monitoring, retain baseline evidence, classify triggers, and open remediation/escalation records.
+    workflows: [monitor-credit-risk-model-workflow]
+    professional_importance: high
+    recommended_action: New provider-neutral monitoring integration capability; no MATLAB-only implementation should own escalation policy.
+    priority: P2
+  - id: GAP-IFRS9-SICR
+    missing_capability: Implement selected IFRS 9 SICR/staging indicators and stage assignment.
+    workflows: [estimate-lifetime-ecl-workflow]
+    professional_importance: critical
+    recommended_action: New matlab-ifrs9-staging implementation skill after accounting-policy and data-contract boundaries are approved.
+    priority: P1
+  - id: GAP-ECL-SCENARIO-WEIGHTING
+    missing_capability: Apply selected macroeconomic scenario weights and produce scenario decompositions.
+    workflows: [estimate-lifetime-ecl-workflow]
+    professional_importance: critical
+    recommended_action: Expand matlab-lifetime-ecl only for selected weighting/aggregation mechanics, or provide a separate scenario-aggregation helper.
+    priority: P1
+  - id: GAP-SCORECARD-REJECTION-INFERENCE
+    missing_capability: Implement a selected, governed rejection-inference treatment.
+    workflows: [develop-credit-scorecard-workflow]
+    professional_importance: high
+    recommended_action: Separate helper only after methodology selection; do not silently impute rejected applicants.
+    priority: P2
+  - id: GAP-SCORECARD-DEPLOYMENT-CONTROLS
+    missing_capability: Produce governed cutoff, reason-code, override, and scorecard deployment-control artifacts.
+    workflows: [develop-credit-scorecard-workflow, monitor-credit-risk-model-workflow]
+    professional_importance: high
+    recommended_action: Provider-neutral deployment/control capability, not a model-fitting extension.
+    priority: P2
+  - id: GAP-INDEPENDENT-VALIDATION
+    missing_capability: Reproduce models independently, manage benchmark comparisons, and preserve validation workpapers.
+    workflows: [validate-credit-risk-model-workflow]
+    professional_importance: critical
+    recommended_action: New implementation-neutral validation harness; MATLAB model skills may plug into it without owning validation disposition.
+    priority: P1
+  - id: GAP-PORTFOLIO-DEPENDENCE-SELECTION
+    missing_capability: Calibrate and diagnose selected credit dependence assumptions from portfolio data.
+    workflows: [assess-credit-portfolio-risk-workflow, stress-test-credit-portfolio-workflow]
+    professional_importance: critical
+    recommended_action: Extend portfolio-risk support with selected-copula calibration and diagnostics; professional selection remains workflow-owned.
+    priority: P1
+  - id: GAP-STRESS-MACRO-TRANSLATION
+    missing_capability: Translate selected macroeconomic or climate scenarios into PD/LGD/EAD and balance-sheet drivers.
+    workflows: [stress-test-credit-portfolio-workflow, estimate-lifetime-ecl-workflow, analyze-climate-risk-scenarios-workflow]
+    professional_importance: critical
+    recommended_action: New scenario-to-risk-driver implementation capability with an explicit selected mapping contract.
+    priority: P1
+  - id: GAP-TRANSITION-DURATION
+    missing_capability: Implement duration/generator calibration and diagnostics for rating migrations.
+    workflows: [model-credit-rating-transitions-workflow]
+    professional_importance: high
+    recommended_action: Expand matlab-credit-curves-and-transitions after source-backed method selection.
+    priority: P2
+  - id: GAP-MARKET-DATA-CURVES
+    missing_capability: Acquire, validate, align, and version market bond/CDS/discount data used for credit curves and CDS analysis.
+    workflows: [build-credit-curves-workflow, analyze-credit-default-swap-risk-workflow, estimate-structural-default-risk-workflow]
+    professional_importance: critical
+    recommended_action: Provider-neutral market-data contract and ingestion capability.
+    priority: P1
+  - id: GAP-CURVE-CONVENTION-CONTROLS
+    missing_capability: Enforce selected interpolation, extrapolation, recovery, day-count, and curve-consistency controls.
+    workflows: [build-credit-curves-workflow, analyze-credit-default-swap-risk-workflow]
+    professional_importance: high
+    recommended_action: New curve-convention validation helper.
+    priority: P2
+  - id: GAP-STRUCTURAL-CALIBRATION
+    missing_capability: Calibrate and benchmark structural-model asset value/volatility and assumptions.
+    workflows: [estimate-structural-default-risk-workflow]
+    professional_importance: high
+    recommended_action: Extend matlab-structural-default-models with selected calibration mechanics and diagnostics.
+    priority: P2
+  - id: GAP-VAR-ES-DATA-CONTROLS
+    missing_capability: Prepare time-aligned, filtered-historical-simulation/parametric inputs and P&L controls.
+    workflows: [estimate-var-es-workflow, backtest-var-es-workflow]
+    professional_importance: high
+    recommended_action: New market-risk data-preparation helper.
+    priority: P2
+  - id: GAP-CLIMATE-FINANCIAL-TRANSLATION
+    missing_capability: Translate climate pathways into exposure, collateral, obligor, and portfolio financial-risk drivers with uncertainty treatment.
+    workflows: [analyze-climate-risk-scenarios-workflow, stress-test-credit-portfolio-workflow]
+    professional_importance: critical
+    recommended_action: New climate-financial-risk translation capability; matlab-climate-scenarios remains a scenario-data helper.
+    priority: P1

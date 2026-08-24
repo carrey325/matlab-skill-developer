@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Lifetime ECL"
+  short_description: "Implement selected lifetime ECL aggregation"
+  default_prompt: "Use $matlab-lifetime-ecl to implement a selected MATLAB lifetime ECL calculation."

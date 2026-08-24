@@ -1,0 +1,9 @@
+id: DEC-001
+title: decision-title
+inputs: []
+rules:
+  - when: condition
+    outcome: selected-action
+    evidence: []
+fallback: request_additional_information
+evidence: []

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.pytest-tmp/
+.DS_Store
+Thumbs.db
+*.zip
+workspace/
+snapshots/
+risk-evidence-library/raw/
+risk-evidence-library/normalized/

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Backtest"
+  short_description: "Code selected portfolio backtests in MATLAB"
+  default_prompt: "Use $matlab-backtest to implement this approved backtest plan in MATLAB."

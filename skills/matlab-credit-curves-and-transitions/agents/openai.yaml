@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Credit Curves and Transitions"
+  short_description: "Implement default curves and credit transitions"
+  default_prompt: "Use $matlab-credit-curves-and-transitions to implement a selected credit curve or transition calculation."

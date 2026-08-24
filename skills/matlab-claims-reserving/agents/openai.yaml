@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Claims Reserving"
+  short_description: "Implement selected insurance reserving calculations"
+  default_prompt: "Use $matlab-claims-reserving to implement a selected MATLAB claims reserving calculation."

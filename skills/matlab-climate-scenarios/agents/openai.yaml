@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Climate Scenarios"
+  short_description: "Implement selected climate scenario operations"
+  default_prompt: "Use $matlab-climate-scenarios to implement a selected MATLAB climate scenario operation."

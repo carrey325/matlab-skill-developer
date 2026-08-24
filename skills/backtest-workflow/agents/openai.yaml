@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backtest Workflow"
+  short_description: "Plan and review point-in-time portfolio backtests"
+  default_prompt: "Use $backtest-workflow to design this backtest and produce an implementation brief."

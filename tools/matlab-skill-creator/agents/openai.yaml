@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Skill Creator"
+  short_description: "Design correctly scoped MATLAB finance skills"
+  default_prompt: "Use $matlab-skill-creator to determine capability granularity and design the needed workflow and MATLAB implementation skills."

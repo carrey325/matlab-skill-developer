@@ -1,0 +1,8 @@
+schema_version: "1.0.0"
+max_rejected_cycles: 3
+precedence:
+  - RESEARCH_MORE
+  - RESYNTHESIZE
+  - REGRANULARIZE
+  - REGENERATE
+  - PASS

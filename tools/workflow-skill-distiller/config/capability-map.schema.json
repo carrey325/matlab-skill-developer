@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "workflow_id", "bindings"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "workflow_id": {"type": "string"},
+    "bindings": {"type": "array", "items": {"$ref": "#/$defs/binding"}}
+  },
+  "$defs": {
+    "binding": {"type": "object", "additionalProperties": false, "required": ["task_id", "capability_id", "mapping_result", "providers"], "properties": {"task_id": {"type": "string"}, "capability_id": {"type": "string"}, "mapping_result": {"enum": ["EXACT", "SKILL_COVERS_MULTIPLE_LEAVES", "COMPOSITION", "SKILL_TOO_COARSE", "HELPER_ONLY", "OVERLAP", "GAP", "NO_PROVIDER_REQUIRED"]}, "providers": {"type": "array", "items": {"$ref": "#/$defs/provider"}}, "rationale": {"type": "string"}}},
+    "provider": {"type": "object", "additionalProperties": false, "required": ["provider", "skills"], "properties": {"provider": {"type": "string"}, "skills": {"type": "array", "items": {"type": "string"}}}}
+  }
+}

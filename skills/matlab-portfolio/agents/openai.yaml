@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Portfolio"
+  short_description: "Code selected portfolio operations in MATLAB"
+  default_prompt: "Use $matlab-portfolio to implement this approved portfolio plan in MATLAB."

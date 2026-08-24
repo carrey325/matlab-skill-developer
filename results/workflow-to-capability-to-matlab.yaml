@@ -1,0 +1,1146 @@
+schema_version: 1.1.0
+policy: Professional reasoning remains workflow-owned; provider bindings implement only frozen capability
+  contracts.
+workflows:
+- workflow_id: develop-lifetime-pd-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-OBJECTIVE
+    capability_id: CAP-OBJECTIVE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Purpose and applicability are workflow-owned professional judgments.
+  - task_id: TASK-DEFAULT
+    capability_id: CAP-DEFAULT-FRAMEWORK
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Default and PD semantics are workflow-owned definitions.
+  - task_id: TASK-DATA
+    capability_id: CAP-DATA-SUITABILITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Data suitability is a professional evidence gate.
+  - task_id: TASK-POPULATION
+    capability_id: CAP-POPULATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Sample design is professional reasoning; implementation may follow the resulting contract.
+  - task_id: TASK-SPECIFICATION
+    capability_id: CAP-LIFETIME-PD-SPECIFICATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Model-family and design selection must not be inferred from available provider methods.
+  - task_id: TASK-FIT
+    capability_id: CAP-LIFETIME-PD-FITTING
+    mapping_result: EXACT
+    providers:
+    - provider: matlab
+      skills:
+      - matlab-lifetime-pd-models
+    rationale: The inspected implementation skill fits logistic, probit, Cox, and custom lifetime-PD specifications.
+  - task_id: TASK-DISCRIMINATION
+    capability_id: CAP-CREDIT-MODEL-DISCRIMINATION
+    mapping_result: SKILL_COVERS_MULTIPLE_LEAVES
+    providers:
+    - provider: matlab
+      skills:
+      - matlab-lifetime-pd-models
+    rationale: The inspected skill computes discrimination evidence after the workflow fixes evaluation
+      design.
+  - task_id: TASK-CALIBRATION
+    capability_id: CAP-CREDIT-MODEL-CALIBRATION
+    mapping_result: SKILL_COVERS_MULTIPLE_LEAVES
+    providers:
+    - provider: matlab
+      skills:
+      - matlab-lifetime-pd-models
+    rationale: The inspected skill computes calibration evidence after target selection.
+  - task_id: TASK-STABILITY
+    capability_id: CAP-CREDIT-MODEL-STABILITY
+    mapping_result: GAP
+    providers: []
+    rationale: No inspected implementation skill proves general temporal, segment, assumption, and sensitivity
+      analysis.
+  - task_id: TASK-SELECT
+    capability_id: CAP-PRODUCTION-MODEL-SELECTION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Disposition is workflow-owned professional judgment.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-MODEL-PACKAGE-REPORTING
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging is workflow-owned.
+  - task_id: TASK-MONITOR
+    capability_id: CAP-MODEL-MONITORING-DESIGN
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Monitoring design is workflow-owned; automation is out of scope.
+- workflow_id: develop-lgd-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-APPLICABILITY
+    capability_id: CAP-APPLICABILITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine LGD purpose and loss concept is workflow-owned professional reasoning.
+  - task_id: TASK-BASIS
+    capability_id: CAP-BASIS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select workout or market LGD basis is workflow-owned professional reasoning.
+  - task_id: TASK-CASHFLOW
+    capability_id: CAP-CASHFLOW
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define recoveries, costs, and discounting is workflow-owned professional reasoning.
+  - task_id: TASK-CURE
+    capability_id: CAP-CURE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine cure and return-to-performing treatment is workflow-owned professional reasoning.
+  - task_id: TASK-WINDOW
+    capability_id: CAP-WINDOW
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Treat incomplete recovery and censoring is workflow-owned professional reasoning.
+  - task_id: TASK-DOWNTURN
+    capability_id: CAP-DOWNTURN
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine downturn calibration requirement is workflow-owned professional reasoning.
+  - task_id: TASK-SEGMENT
+    capability_id: CAP-SEGMENT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select LGD segmentation is workflow-owned professional reasoning.
+  - task_id: TASK-FAMILY
+    capability_id: CAP-FAMILY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select LGD model family is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine LGD model disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: EXACT
+    providers:
+    - provider: matlab
+      skills: &id001
+      - matlab-lgd-models
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id001
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: develop-ead-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-APPLICABILITY
+    capability_id: CAP-APPLICABILITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine EAD purpose and exposure convention is workflow-owned professional reasoning.
+  - task_id: TASK-EXPOSURE
+    capability_id: CAP-EXPOSURE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define drawn and undrawn exposure components is workflow-owned professional reasoning.
+  - task_id: TASK-PRODUCT
+    capability_id: CAP-PRODUCT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Choose product-specific EAD route is workflow-owned professional reasoning.
+  - task_id: TASK-CCF
+    capability_id: CAP-CCF
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine whether CCF is a stable target is workflow-owned professional reasoning.
+  - task_id: TASK-WINDOW
+    capability_id: CAP-WINDOW
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select the pre-default observation horizon is workflow-owned professional reasoning.
+  - task_id: TASK-LIMIT
+    capability_id: CAP-LIMIT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Treat limit changes and additional drawings is workflow-owned professional reasoning.
+  - task_id: TASK-FAMILY
+    capability_id: CAP-FAMILY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select EAD model family is workflow-owned professional reasoning.
+  - task_id: TASK-BOUNDS
+    capability_id: CAP-BOUNDS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Control EAD and CCF boundary behaviour is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine EAD model disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: EXACT
+    providers:
+    - provider: matlab
+      skills: &id002
+      - matlab-ead-models
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id002
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: develop-credit-scorecard-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-PURPOSE
+    capability_id: CAP-PURPOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine scorecard purpose and responsibility boundary is workflow-owned professional
+      reasoning.
+  - task_id: TASK-POPULATION
+    capability_id: CAP-POPULATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define target and development population is workflow-owned professional reasoning.
+  - task_id: TASK-REJECT
+    capability_id: CAP-REJECT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine reject-inference treatment is workflow-owned professional reasoning.
+  - task_id: TASK-BINNING
+    capability_id: CAP-BINNING
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select supervised binning treatment is workflow-owned professional reasoning.
+  - task_id: TASK-MONOTONICITY
+    capability_id: CAP-MONOTONICITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine monotonicity constraints is workflow-owned professional reasoning.
+  - task_id: TASK-VARIABLES
+    capability_id: CAP-VARIABLES
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select scorecard variables is workflow-owned professional reasoning.
+  - task_id: TASK-SCALING
+    capability_id: CAP-SCALING
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set points scaling and reason-code interpretation is workflow-owned professional reasoning.
+  - task_id: TASK-CUTOFF
+    capability_id: CAP-CUTOFF
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define cutoff and decision-policy handoff is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine scorecard disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id003
+      - matlab-credit-scorecard-modeling
+      - matlab-compact-credit-scorecard
+      - matlab-credit-model-governance
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id003
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: develop-credit-default-model-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-TARGET
+    capability_id: CAP-TARGET
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define the modeled credit event is workflow-owned professional reasoning.
+  - task_id: TASK-HORIZON
+    capability_id: CAP-HORIZON
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select prediction horizon and output semantics is workflow-owned professional reasoning.
+  - task_id: TASK-STRUCTURE
+    capability_id: CAP-STRUCTURE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Choose binary, ordinal, or nominal structure is workflow-owned professional reasoning.
+  - task_id: TASK-DATA
+    capability_id: CAP-DATA
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine panel, snapshot, or event-history data design is workflow-owned professional
+      reasoning.
+  - task_id: TASK-FAMILY
+    capability_id: CAP-FAMILY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select statistical or nonlinear candidate family is workflow-owned professional reasoning.
+  - task_id: TASK-IMBALANCE
+    capability_id: CAP-IMBALANCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Treat class imbalance and rare states is workflow-owned professional reasoning.
+  - task_id: TASK-INTERPRET
+    capability_id: CAP-INTERPRET
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set interpretability and benchmark requirements is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine default-model disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id004
+      - matlab-credit-multinomial-modeling
+      - matlab-credit-default-deep-learning
+      - matlab-credit-model-governance
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id004
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: validate-credit-risk-model-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-SCOPE
+    capability_id: CAP-SCOPE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set risk-based validation scope is workflow-owned professional reasoning.
+  - task_id: TASK-INDEPENDENCE
+    capability_id: CAP-INDEPENDENCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine validator independence is workflow-owned professional reasoning.
+  - task_id: TASK-CONCEPT
+    capability_id: CAP-CONCEPT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess conceptual soundness is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENTATION
+    capability_id: CAP-IMPLEMENTATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Verify data and implementation is workflow-owned professional reasoning.
+  - task_id: TASK-BENCHMARK
+    capability_id: CAP-BENCHMARK
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select benchmark and challenger evidence is workflow-owned professional reasoning.
+  - task_id: TASK-OUTCOMES
+    capability_id: CAP-OUTCOMES
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Judge outcomes and stability is workflow-owned professional reasoning.
+  - task_id: TASK-LIMITATIONS
+    capability_id: CAP-LIMITATIONS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Classify limitations and compensating controls is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Issue independent validation disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id005
+      - matlab-credit-model-governance
+      - matlab-lifetime-pd-models
+      - matlab-lgd-models
+      - matlab-ead-models
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id005
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: monitor-credit-risk-model-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-BASELINE
+    capability_id: CAP-BASELINE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select monitoring population and baseline is workflow-owned professional reasoning.
+  - task_id: TASK-THRESHOLD
+    capability_id: CAP-THRESHOLD
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Apply institution-approved threshold policy is workflow-owned professional reasoning.
+  - task_id: TASK-DRIFT
+    capability_id: CAP-DRIFT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Diagnose input and population drift is workflow-owned professional reasoning.
+  - task_id: TASK-PERFORMANCE
+    capability_id: CAP-PERFORMANCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Diagnose calibration and discrimination change is workflow-owned professional reasoning.
+  - task_id: TASK-OVERRIDE
+    capability_id: CAP-OVERRIDE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess overrides and use divergence is workflow-owned professional reasoning.
+  - task_id: TASK-CHANGE
+    capability_id: CAP-CHANGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Classify remediation as recalibration or redevelopment is workflow-owned professional reasoning.
+  - task_id: TASK-USE
+    capability_id: CAP-USE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine interim model-use status is workflow-owned professional reasoning.
+  - task_id: TASK-ESCALATION
+    capability_id: CAP-ESCALATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select final monitoring action is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id006
+      - matlab-credit-model-governance
+      - matlab-lifetime-pd-models
+      - matlab-lgd-models
+      - matlab-ead-models
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id006
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: estimate-lifetime-ecl-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-REGIME
+    capability_id: CAP-REGIME
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select governing loss regime is workflow-owned professional reasoning.
+  - task_id: TASK-SCOPE
+    capability_id: CAP-SCOPE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine instrument scope and loss horizon is workflow-owned professional reasoning.
+  - task_id: TASK-STAGE
+    capability_id: CAP-STAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine IFRS 9 staging and SICR route is workflow-owned professional reasoning.
+  - task_id: TASK-PARAMETERS
+    capability_id: CAP-PARAMETERS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess PD LGD and EAD input suitability is workflow-owned professional reasoning.
+  - task_id: TASK-SCENARIO
+    capability_id: CAP-SCENARIO
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select forward-looking scenarios and weights is workflow-owned professional reasoning.
+  - task_id: TASK-DISCOUNT
+    capability_id: CAP-DISCOUNT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select cash-shortfall and discounting basis is workflow-owned professional reasoning.
+  - task_id: TASK-OVERLAY
+    capability_id: CAP-OVERLAY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine qualitative adjustment or overlay is workflow-owned professional reasoning.
+  - task_id: TASK-AGGREGATE
+    capability_id: CAP-AGGREGATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Aggregate and reconcile ECL is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine ECL estimate disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id007
+      - matlab-lifetime-ecl
+      - matlab-lifetime-pd-models
+      - matlab-lgd-models
+      - matlab-ead-models
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id007
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: assess-credit-portfolio-risk-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-MODE
+    capability_id: CAP-MODE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select default-mode or migration-mode loss is workflow-owned professional reasoning.
+  - task_id: TASK-HORIZON
+    capability_id: CAP-HORIZON
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set horizon and tail probability is workflow-owned professional reasoning.
+  - task_id: TASK-INPUTS
+    capability_id: CAP-INPUTS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess portfolio parameter compatibility is workflow-owned professional reasoning.
+  - task_id: TASK-DEPENDENCE
+    capability_id: CAP-DEPENDENCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select dependence structure is workflow-owned professional reasoning.
+  - task_id: TASK-CONCENTRATION
+    capability_id: CAP-CONCENTRATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess name and sector concentration is workflow-owned professional reasoning.
+  - task_id: TASK-CONVERGENCE
+    capability_id: CAP-CONVERGENCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Judge simulation precision and tail stability is workflow-owned professional reasoning.
+  - task_id: TASK-CAPITAL
+    capability_id: CAP-CAPITAL
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine EL UL and economic-capital output is workflow-owned professional reasoning.
+  - task_id: TASK-ATTRIBUTION
+    capability_id: CAP-ATTRIBUTION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select risk contribution and diversification attribution is workflow-owned professional
+      reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine portfolio-risk reportability is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id008
+      - matlab-credit-portfolio-risk
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id008
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: stress-test-credit-portfolio-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-PURPOSE
+    capability_id: CAP-PURPOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine stress-test purpose and authority is workflow-owned professional reasoning.
+  - task_id: TASK-SCENARIO
+    capability_id: CAP-SCENARIO
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select and validate scenario set is workflow-owned professional reasoning.
+  - task_id: TASK-TRANSLATION
+    capability_id: CAP-TRANSLATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select macro-to-credit translation is workflow-owned professional reasoning.
+  - task_id: TASK-PARAMETERS
+    capability_id: CAP-PARAMETERS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Stress PD LGD and EAD consistently is workflow-owned professional reasoning.
+  - task_id: TASK-BALANCE
+    capability_id: CAP-BALANCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set balance-sheet and exposure evolution is workflow-owned professional reasoning.
+  - task_id: TASK-CONCENTRATION
+    capability_id: CAP-CONCENTRATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess stressed concentration and dependence is workflow-owned professional reasoning.
+  - task_id: TASK-SENSITIVITY
+    capability_id: CAP-SENSITIVITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Design severity and assumption sensitivities is workflow-owned professional reasoning.
+  - task_id: TASK-ESCALATION
+    capability_id: CAP-ESCALATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine stress-result disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id009
+      - matlab-credit-portfolio-risk
+      - matlab-lifetime-pd-models
+      - matlab-lgd-models
+      - matlab-ead-models
+      - matlab-climate-scenarios
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id009
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: model-credit-rating-transitions-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-STATES
+    capability_id: CAP-STATES
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define rating states and ordering is workflow-owned professional reasoning.
+  - task_id: TASK-OBSERVATION
+    capability_id: CAP-OBSERVATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select cohort or duration estimator is workflow-owned professional reasoning.
+  - task_id: TASK-DEFAULT
+    capability_id: CAP-DEFAULT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set default and withdrawal treatment is workflow-owned professional reasoning.
+  - task_id: TASK-HORIZON
+    capability_id: CAP-HORIZON
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Convert transition horizon is workflow-owned professional reasoning.
+  - task_id: TASK-SPARSE
+    capability_id: CAP-SPARSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Treat sparse transitions and rare states is workflow-owned professional reasoning.
+  - task_id: TASK-CALIBRATION
+    capability_id: CAP-CALIBRATION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Calibrate transition and default rates is workflow-owned professional reasoning.
+  - task_id: TASK-STRESS
+    capability_id: CAP-STRESS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine stressed transition treatment is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine transition-model disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id010
+      - matlab-credit-curves-and-transitions
+      - matlab-credit-portfolio-risk
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id010
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: build-credit-curves-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-PURPOSE
+    capability_id: CAP-PURPOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine curve purpose and probability interpretation is workflow-owned professional reasoning.
+  - task_id: TASK-INSTRUMENT
+    capability_id: CAP-INSTRUMENT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select calibration instruments and quotes is workflow-owned professional reasoning.
+  - task_id: TASK-CONVENTION
+    capability_id: CAP-CONVENTION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Freeze contract and market conventions is workflow-owned professional reasoning.
+  - task_id: TASK-RECOVERY
+    capability_id: CAP-RECOVERY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set recovery assumption or recovery calibration is workflow-owned professional reasoning.
+  - task_id: TASK-DISCOUNT
+    capability_id: CAP-DISCOUNT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select discount curve and currency treatment is workflow-owned professional reasoning.
+  - task_id: TASK-CALIBRATE
+    capability_id: CAP-CALIBRATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Choose calibration objective and constraints is workflow-owned professional reasoning.
+  - task_id: TASK-INTERPOLATE
+    capability_id: CAP-INTERPOLATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select interpolation and extrapolation policy is workflow-owned professional reasoning.
+  - task_id: TASK-CONSISTENCY
+    capability_id: CAP-CONSISTENCY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Validate repricing and curve consistency is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine credit-curve disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id011
+      - matlab-credit-curves-and-transitions
+      - matlab-credit-default-swaps
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id011
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: estimate-structural-default-risk-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-BOUNDARY
+    capability_id: CAP-BOUNDARY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define default boundary and liability mapping is workflow-owned professional reasoning.
+  - task_id: TASK-HORIZON
+    capability_id: CAP-HORIZON
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set structural risk horizon is workflow-owned professional reasoning.
+  - task_id: TASK-VOLATILITY
+    capability_id: CAP-VOLATILITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select equity-volatility input is workflow-owned professional reasoning.
+  - task_id: TASK-CALIBRATE
+    capability_id: CAP-CALIBRATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Calibrate asset value and asset volatility is workflow-owned professional reasoning.
+  - task_id: TASK-MARKET
+    capability_id: CAP-MARKET
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess market and capital-structure representativeness is workflow-owned professional reasoning.
+  - task_id: TASK-SENSITIVITY
+    capability_id: CAP-SENSITIVITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess structural-model sensitivity is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine structural-risk disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: EXACT
+    providers:
+    - provider: matlab
+      skills: &id012
+      - matlab-structural-default-models
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id012
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: analyze-credit-default-swap-risk-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-PURPOSE
+    capability_id: CAP-PURPOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set CDS analysis purpose and prohibited actions is workflow-owned professional reasoning.
+  - task_id: TASK-CONTRACT
+    capability_id: CAP-CONTRACT
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Identify contract and credit-event conventions is workflow-owned professional reasoning.
+  - task_id: TASK-CURVES
+    capability_id: CAP-CURVES
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select discount and credit curves is workflow-owned professional reasoning.
+  - task_id: TASK-RECOVERY
+    capability_id: CAP-RECOVERY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set recovery and settlement assumptions is workflow-owned professional reasoning.
+  - task_id: TASK-CALIBRATE
+    capability_id: CAP-CALIBRATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine price spread or implied-risk route is workflow-owned professional reasoning.
+  - task_id: TASK-SENSITIVITY
+    capability_id: CAP-SENSITIVITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select CDS risk sensitivities is workflow-owned professional reasoning.
+  - task_id: TASK-RECONCILE
+    capability_id: CAP-RECONCILE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Reconcile valuation to market quote is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine CDS analysis disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id013
+      - matlab-credit-default-swaps
+      - matlab-credit-curves-and-transitions
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id013
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: estimate-var-es-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-PURPOSE
+    capability_id: CAP-PURPOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine VaR and ES use is workflow-owned professional reasoning.
+  - task_id: TASK-PNL
+    capability_id: CAP-PNL
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define portfolio and P&L measure is workflow-owned professional reasoning.
+  - task_id: TASK-HORIZON
+    capability_id: CAP-HORIZON
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Set horizon and confidence level is workflow-owned professional reasoning.
+  - task_id: TASK-METHOD
+    capability_id: CAP-METHOD
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select VaR and ES estimation method is workflow-owned professional reasoning.
+  - task_id: TASK-NONLINEAR
+    capability_id: CAP-NONLINEAR
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Treat nonlinear positions and risk factors is workflow-owned professional reasoning.
+  - task_id: TASK-TAIL
+    capability_id: CAP-TAIL
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select tail and volatility treatment is workflow-owned professional reasoning.
+  - task_id: TASK-AGGREGATE
+    capability_id: CAP-AGGREGATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Aggregate risk across positions and horizons is workflow-owned professional reasoning.
+  - task_id: TASK-DIAGNOSTIC
+    capability_id: CAP-DIAGNOSTIC
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Judge estimate stability and plausibility is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine VaR and ES estimation disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: EXACT
+    providers:
+    - provider: matlab
+      skills: &id014
+      - matlab-var-es-estimation
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id014
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: backtest-var-es-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-ALIGN
+    capability_id: CAP-ALIGN
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Reconcile forecasts with realised P&L is workflow-owned professional reasoning.
+  - task_id: TASK-EXCEPTIONS
+    capability_id: CAP-EXCEPTIONS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Define VaR exceptions is workflow-owned professional reasoning.
+  - task_id: TASK-TESTS
+    capability_id: CAP-TESTS
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select VaR test family is workflow-owned professional reasoning.
+  - task_id: TASK-SAMPLE
+    capability_id: CAP-SAMPLE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Assess sample size and test power is workflow-owned professional reasoning.
+  - task_id: TASK-TRAFFIC
+    capability_id: CAP-TRAFFIC
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Apply traffic-light or institutional policy is workflow-owned professional reasoning.
+  - task_id: TASK-ES
+    capability_id: CAP-ES
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select expected-shortfall backtest is workflow-owned professional reasoning.
+  - task_id: TASK-DIAGNOSE
+    capability_id: CAP-DIAGNOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Diagnose backtest failure is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine backtesting disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: EXACT
+    providers:
+    - provider: matlab
+      skills: &id015
+      - matlab-var-es-backtesting
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id015
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.
+- workflow_id: analyze-climate-risk-scenarios-workflow
+  workflow_version: 1.1.0
+  bindings:
+  - task_id: TASK-PURPOSE
+    capability_id: CAP-PURPOSE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine climate-analysis purpose and authority is workflow-owned professional reasoning.
+  - task_id: TASK-SOURCE
+    capability_id: CAP-SOURCE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Select climate scenario source and set is workflow-owned professional reasoning.
+  - task_id: TASK-HAZARD
+    capability_id: CAP-HAZARD
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Separate transition and physical risk channels is workflow-owned professional reasoning.
+  - task_id: TASK-HORIZON
+    capability_id: CAP-HORIZON
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Align climate and financial horizons is workflow-owned professional reasoning.
+  - task_id: TASK-MAP
+    capability_id: CAP-MAP
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Map sectors regions and counterparties is workflow-owned professional reasoning.
+  - task_id: TASK-TRANSLATE
+    capability_id: CAP-TRANSLATE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Translate climate variables into financial risk drivers is workflow-owned professional
+      reasoning.
+  - task_id: TASK-UNCERTAINTY
+    capability_id: CAP-UNCERTAINTY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Represent climate-model uncertainty is workflow-owned professional reasoning.
+  - task_id: TASK-CAPABILITY
+    capability_id: CAP-CAPABILITY
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine implementation coverage and GAPs is workflow-owned professional reasoning.
+  - task_id: TASK-DISPOSITION
+    capability_id: CAP-DISPOSITION
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Determine climate-analysis disposition is workflow-owned professional reasoning.
+  - task_id: TASK-IMPLEMENT
+    capability_id: CAP-IMPLEMENT
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: &id016
+      - matlab-climate-scenarios
+      - matlab-credit-portfolio-risk
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-VALIDATE
+    capability_id: CAP-VALIDATE
+    mapping_result: COMPOSITION
+    providers:
+    - provider: matlab
+      skills: *id016
+    rationale: The provider implements the frozen computational contract.
+  - task_id: TASK-PACKAGE
+    capability_id: CAP-PACKAGE
+    mapping_result: NO_PROVIDER_REQUIRED
+    providers: []
+    rationale: Professional evidence packaging does not require a provider.

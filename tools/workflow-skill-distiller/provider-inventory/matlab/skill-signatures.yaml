@@ -1,0 +1,213 @@
+schema_version: 1.0.0
+provider: matlab
+signatures:
+- skill: matlab-backtest
+  skill_sha256: bb19cf55f9471e029cecc3dd451474dbbd52e40655a20b90eba163ab47bcd1f9
+  evidence_state: inspected
+  description: Writes, reviews, or repairs MATLAB portfolio-backtest code when MATLAB is explicitly requested
+    or is the default language and backtest-workflow has supplied the implementation plan. Use directly
+    when the strategy, schedule, state, costs, and required engine operations are already fixed. It does
+    not design the strategy, select research methods, set evaluation policy, or interpret investment merit.
+  methods: []
+  capabilities:
+  - portfolio-backtests
+- skill: matlab-brinson
+  skill_sha256: 282b064356f7dbb923961f2423b4a7540dd063a952ea6d09696bfd74995b0019
+  evidence_state: inspected
+  description: Writes, reviews, or repairs MATLAB Brinson-attribution code when MATLAB is explicitly requested
+    or is the default language and brinson-workflow has supplied the implementation plan. Use directly
+    when the AssetTable data contract and required functions are already fixed. It does not choose the
+    benchmark, taxonomy, period or weight policy, attribution method, or any required materiality and
+    interpretation policy.
+  methods: []
+  capabilities:
+  - brinson-attribution
+- skill: matlab-claims-reserving
+  skill_sha256: ea3165f160efba836485b5a6aa00846a5ab0b72276a3d311d4716f8f86f260e3
+  evidence_state: inspected
+  description: Implement selected insurance claims reserving objects and calculations in MATLAB without
+    choosing reserving methodology, actuarial assumptions, or reporting conclusions.
+  methods: []
+  capabilities:
+  - insurance-claims-reserving-objects-and
+  - claims-reserving
+- skill: matlab-climate-scenarios
+  skill_sha256: aec5ae7f99448afb61097af12332b21ff2e1d87a2ea88c95be80b28af88ad526
+  evidence_state: inspected
+  description: Implement selected climate scenario creation, querying, grouping, transformation, shock,
+    and visualization work in MATLAB without choosing climate-risk policy or scenario assumptions.
+  methods: []
+  capabilities:
+  - climate-scenario-creation,-querying,-grouping,-transformation,-shock,-and-visualization
+  - climate-scenarios
+- skill: matlab-compact-credit-scorecard
+  skill_sha256: fdff8132445d824299683ef080589d53380dff65bf2a1094914c7e2c107e6bb2
+  evidence_state: inspected
+  description: Implement selected compact credit scorecard conversion, scoring, probability-of-default,
+    and validation work in MATLAB without choosing credit-model policy.
+  methods: []
+  capabilities:
+  - compact-credit-scorecard-conversion,-scoring,-probability-of-default,-and-validation
+  - compact-credit-scorecards
+- skill: matlab-credit-curves-and-transitions
+  skill_sha256: 2dcaff5e5ad69d6f25e44fbf058e79628136f9cd05d01238e0377b3671930223
+  evidence_state: inspected
+  description: Implement selected default-probability curve bootstrap and credit transition calculations
+    in MATLAB without choosing market-data, rating, or threshold conventions.
+  methods: []
+  capabilities:
+  - default-probability-curve-bootstrap-and-credit-transition
+  - credit-curves-and-transitions
+- skill: matlab-credit-default-deep-learning
+  skill_sha256: dcd6109f60611153eee6646cf5ccf0addc233003d6a51dfca3d395c882d3ae89
+  evidence_state: inspected
+  description: Implement selected MATLAB neural-network construction, training, prediction, and reporting
+    for credit-default probability tasks without choosing the model architecture or policy.
+  methods:
+  - regression
+  capabilities:
+  - credit-default-neural-networks
+- skill: matlab-credit-default-swaps
+  skill_sha256: b0f58a9e0e877267bd4d90ee71b55db05ad794f593e788f28889351207560a61
+  evidence_state: inspected
+  description: Implement selected credit default swap pricing and spread calculations in MATLAB without
+    choosing the contract, curve, recovery, or valuation methodology.
+  methods: []
+  capabilities:
+  - credit-default-swap-pricing-and-spread
+  - credit-default-swaps
+- skill: matlab-credit-model-governance
+  skill_sha256: 7fea0bafe035e3697a2d6e6d2ecb6fd031e3c6eb0f58b0d8203d122263a22362
+  evidence_state: inspected
+  description: Implement selected MATLAB fairness, disparate-impact mitigation, and model-explainability
+    analyses for credit models without choosing governance thresholds or policy.
+  methods:
+  - regression
+  capabilities:
+  - matlab-fairness,-disparate-impact-mitigation,-and-model-explainability
+  - credit-model-governance
+- skill: matlab-credit-multinomial-modeling
+  skill_sha256: 0f185d4f61ebb24e67891de246a7007aa7bab330efd0c8d8bc95546256bd4bf0
+  evidence_state: inspected
+  description: Implement selected MATLAB ordinal or nominal multinomial credit-model fitting, prediction,
+    and validation without choosing predictors, rating policy, or outcome taxonomy.
+  methods:
+  - regression
+  capabilities:
+  - credit-multinomial-models
+- skill: matlab-credit-portfolio-risk
+  skill_sha256: ac42ebbc8abf557d62298d026da4b80267336561cd7b89451054797ff6c3ceb4
+  evidence_state: inspected
+  description: Implement selected corporate credit portfolio simulation, capital, concentration, and risk-contribution
+    calculations in MATLAB without selecting the credit-risk methodology.
+  methods: []
+  capabilities:
+  - corporate-credit-portfolio-simulation,-capital,-concentration,-and-risk-contribution
+  - credit-portfolio-risk
+- skill: matlab-credit-scorecard-modeling
+  skill_sha256: b7dee7c13d5350fbb2315c4f08647a0a5bb68edff34fa02ce49971b47748e989
+  evidence_state: inspected
+  description: Implement selected credit scorecard screening, binning, fitting, scoring, and validation
+    work in MATLAB; do not choose the credit policy or modeling method.
+  methods:
+  - regression
+  capabilities:
+  - credit-scorecard-screening,-binning,-fitting,-scoring,-and-validation
+  - credit-scorecard-modeling
+- skill: matlab-ead-models
+  skill_sha256: 4d91beba14194b08a4828938123ee08c73e60c9cd0a5955399a2cdfa1dcb3b3c
+  evidence_state: inspected
+  description: Implement selected exposure-at-default model fitting, prediction, calibration, and discrimination
+    work in MATLAB without choosing the exposure-model methodology or policy.
+  methods:
+  - Tobit
+  - Beta
+  - regression
+  capabilities:
+  - exposure-at-default-model-fitting,-prediction,-calibration,-and-discrimination
+  - ead-models
+- skill: matlab-lgd-models
+  skill_sha256: b1db22ffcd4f3b378cb4b34eb9331f2ae44d38193731487e7616b6e11b583dfe
+  evidence_state: inspected
+  description: Implement selected loss-given-default model fitting, prediction, calibration, and discrimination
+    work in MATLAB without choosing the loss-model methodology or policy.
+  methods:
+  - Tobit
+  - Beta
+  - regression
+  capabilities:
+  - loss-given-default-model-fitting,-prediction,-calibration,-and-discrimination
+  - lgd-models
+- skill: matlab-life-table-modeling
+  skill_sha256: 7baaf305e68e91892357205847e17d8a64405a0d3b84745bb9e9bb69898cc946
+  evidence_state: inspected
+  description: Implement selected life table calibration, generation, and conversion work in MATLAB without
+    choosing mortality assumptions, population policy, or actuarial interpretation.
+  methods: []
+  capabilities:
+  - life-table-calibration,-generation,-and-conversion
+  - life-table-modeling
+- skill: matlab-lifetime-ecl
+  skill_sha256: 3edfd2da7c9ffa9f5bcbc72c17aa02479627ba7dc53ac0a9c89c714cdb9a8701
+  evidence_state: inspected
+  description: Implement selected lifetime expected credit loss aggregation with portfolioECL in MATLAB
+    without choosing PD, LGD, EAD, discounting, or accounting policy.
+  methods:
+  - Cox
+  - regression
+  capabilities:
+  - lifetime-expected-credit-loss-aggregation-with-portfolioecl
+  - lifetime-ecl
+- skill: matlab-lifetime-pd-models
+  skill_sha256: 860fa2ba1af8d3f833fa9d1e7f29717f0974157739240a5434b7779ef57a4908
+  evidence_state: inspected
+  description: Implement selected lifetime probability-of-default model construction, prediction, calibration,
+    and discrimination work in MATLAB without choosing the credit modeling methodology.
+  methods:
+  - Logistic
+  - Probit
+  - Cox
+  - custom
+  - regression
+  capabilities:
+  - lifetime-probability-of-default-model-construction,-prediction,-calibration,-and-discrimination
+  - lifetime-pd-models
+- skill: matlab-portfolio
+  skill_sha256: 9920aa4e2a2b58f64085fc99c0ca66223bce672ec0984908d489e01f87fdc918
+  evidence_state: inspected
+  description: Writes, reviews, or repairs MATLAB portfolio-optimization code when MATLAB is explicitly
+    requested or is the default language and portfolio-workflow has supplied the implementation plan.
+    Use directly when the object, operations, and financial parameters are already fixed. It does not
+    select the portfolio method, benchmark role, constraints, or any applicable approval and interpretation
+    policy.
+  methods:
+  - custom
+  capabilities:
+  - portfolio-optimization
+- skill: matlab-structural-default-models
+  skill_sha256: 45fb2047c3d4d77d4af0382e9918efa7661323d828ef874711a330152a763eec
+  evidence_state: inspected
+  description: Implement selected Merton structural default-probability calculations in MATLAB; do not
+    choose the structural-model assumptions or credit decision policy.
+  methods: []
+  capabilities:
+  - merton-structural-default-probability
+  - structural-default-models
+- skill: matlab-var-es-backtesting
+  skill_sha256: c8c7728eb13d6b9593b7be795a217ccd3ea2b4c56f4216b40b4492057be6981d
+  evidence_state: inspected
+  description: Implement selected value-at-risk and expected-shortfall backtest objects and diagnostics
+    in MATLAB without choosing the risk model, testing policy, or regulatory interpretation.
+  methods: []
+  capabilities:
+  - value-at-risk-and-expected-shortfall-backtest-objects-and-diagnostics
+  - var-and-es-backtesting
+- skill: matlab-var-es-estimation
+  skill_sha256: 57064e7237a18641e175137b8d488b79f7b7447f6e3aef032e3aa878444fec73
+  evidence_state: inspected
+  description: Implement selected value-at-risk and expected-shortfall estimation calls in MATLAB without
+    choosing the distribution, horizon, confidence level, or risk policy.
+  methods: []
+  capabilities:
+  - value-at-risk-and-expected-shortfall-estimation-calls
+  - var-and-es-estimation

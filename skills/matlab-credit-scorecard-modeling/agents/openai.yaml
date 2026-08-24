@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Credit Scorecard Modeling"
+  short_description: "Implement selected credit scorecard code in MATLAB"
+  default_prompt: "Use $matlab-credit-scorecard-modeling to implement a selected MATLAB credit scorecard operation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Life Table Modeling"
+  short_description: "Implement selected life table model operations"
+  default_prompt: "Use $matlab-life-table-modeling to implement a selected MATLAB life table operation."

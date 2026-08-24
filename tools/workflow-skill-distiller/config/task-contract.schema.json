@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task-contract.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "workflow_name", "purpose", "domain", "jurisdiction_scope", "target_granularity", "required_inputs", "expected_deliverables", "exclusions", "adjacent_workflows", "start_boundary", "end_boundary", "implementation_binding"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "workflow_name": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-workflow$", "maxLength": 64},
+    "purpose": {"type": "string", "minLength": 20},
+    "domain": {"type": "string", "minLength": 2},
+    "jurisdiction_scope": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "target_granularity": {"const": "professional-task"},
+    "required_inputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/named_description"}},
+    "expected_deliverables": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "exclusions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "adjacent_workflows": {"type": "array", "items": {"type": "string"}},
+    "start_boundary": {"type": "string", "minLength": 10},
+    "end_boundary": {"type": "string", "minLength": 10},
+    "implementation_binding": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "named_description": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description"],
+      "properties": {"name": {"type": "string", "minLength": 1}, "description": {"type": "string", "minLength": 3}}
+    }
+  }
+}

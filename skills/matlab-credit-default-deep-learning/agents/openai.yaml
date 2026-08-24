@@ -1,0 +1,4 @@
+interface:
+  display_name: "Credit Default Deep Learning"
+  short_description: "Implement selected credit-default neural networks in MATLAB."
+  default_prompt: "Use $matlab-credit-default-deep-learning to implement this selected MATLAB credit-default network task."

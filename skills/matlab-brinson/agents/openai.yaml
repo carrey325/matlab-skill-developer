@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Brinson"
+  short_description: "Code selected Brinson attribution in MATLAB"
+  default_prompt: "Use $matlab-brinson to implement this approved Brinson attribution plan in MATLAB."

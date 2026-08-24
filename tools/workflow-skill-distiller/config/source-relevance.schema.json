@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "workflow_id", "sources"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "workflow_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-workflow$"},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}}
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "evidence_role", "supports_dimensions", "applicability", "selection_rationale"],
+      "properties": {
+        "source_id": {"type": "string"},
+        "evidence_role": {"enum": ["normative", "supervisory", "professional_methodology", "business_process", "implementation", "worked_example"]},
+        "supports_dimensions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "applicability": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "selection_rationale": {"type": "string", "minLength": 30},
+        "cross_domain_rationale": {"type": ["string", "null"], "minLength": 30}
+      }
+    }
+  }
+}

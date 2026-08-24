@@ -1,0 +1,7 @@
+schema_version: "1.0.0"
+required_leaf_properties:
+  - independent_professional_meaning
+  - clear_input
+  - clear_output
+  - testable_success_or_failure
+  - mapped_capability_or_gap

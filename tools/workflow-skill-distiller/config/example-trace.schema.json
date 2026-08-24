@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "example_id", "case", "case_type", "source_provenance", "initial_conditions", "objective", "mapped_nodes", "expected_decisions", "expected_validation", "expected_recovery_or_stop", "outputs", "coverage_notes"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"}, "example_id": {"type": "string", "pattern": "^EX-[A-Z0-9-]+$"}, "case": {"type": "string"}, "case_type": {"enum": ["real_source_replay", "synthetic_adversarial"]},
+    "source_provenance": {"type": ["object", "null"], "additionalProperties": false, "required": ["source_id", "source_title", "source_url", "locator", "input_summary", "expected_output_summary"], "properties": {"source_id": {"type": "string"}, "source_title": {"type": "string"}, "source_url": {"type": "string", "format": "uri"}, "locator": {"type": "string"}, "input_summary": {"type": "string"}, "expected_output_summary": {"type": "string"}}},
+    "initial_conditions": {"type": "array", "items": {"type": "string"}}, "objective": {"type": "string"}, "mapped_nodes": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "expected_decisions": {"type": "array", "items": {"$ref": "#/$defs/decision"}}, "expected_validation": {"type": "array", "items": {"$ref": "#/$defs/gate"}}, "expected_recovery_or_stop": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}}, "adjacent_handoff": {"type": ["string", "null"]}, "coverage_notes": {"type": "string", "minLength": 10}
+  },
+  "allOf": [
+    {"if": {"properties": {"case_type": {"const": "real_source_replay"}}}, "then": {"properties": {"source_provenance": {"type": "object"}, "expected_decisions": {"minItems": 1}}}},
+    {"if": {"properties": {"case_type": {"const": "synthetic_adversarial"}}}, "then": {"properties": {"source_provenance": {"type": "null"}}}}
+  ],
+  "$defs": {
+    "decision": {"type": "object", "additionalProperties": false, "required": ["decision_id", "rule_ids", "outcome", "rationale"], "properties": {"decision_id": {"type": "string"}, "rule_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "outcome": {"type": "string"}, "rationale": {"type": "string"}}},
+    "gate": {"type": "object", "additionalProperties": false, "required": ["gate_id", "outcome", "rationale"], "properties": {"gate_id": {"type": "string"}, "outcome": {"enum": ["PASS", "PASS_WITH_LIMITATION", "REMEDIATE", "REJECT"]}, "rationale": {"type": "string"}}}
+  }
+}

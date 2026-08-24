@@ -1,0 +1,4 @@
+interface:
+  display_name: "Credit Multinomial Modeling"
+  short_description: "Implement selected ordinal or nominal credit multinomial models."
+  default_prompt: "Use $matlab-credit-multinomial-modeling to implement this selected MATLAB multinomial credit-model task."

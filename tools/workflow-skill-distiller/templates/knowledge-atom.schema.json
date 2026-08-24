@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge-atom.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "statement", "scope", "mandatory", "source_id", "locator", "authority_tier", "confidence", "applicability"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^KA-[A-Z0-9-]+-[0-9]{4}$"},
+    "type": {"enum": ["definition", "requirement", "input", "output", "task", "inference", "decision_rule", "constraint", "validation_gate", "metric", "assumption", "exception", "fallback", "stop_condition", "deliverable"]},
+    "statement": {"type": "string", "minLength": 5},
+    "scope": {"type": "string", "minLength": 2},
+    "mandatory": {"type": "boolean"},
+    "source_id": {"type": "string"},
+    "locator": {"$ref": "#/$defs/locator"},
+    "authority_tier": {"enum": ["T1", "T2", "T3", "T4", "T5", "T6"]},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "applicability": {"$ref": "#/$defs/applicability"},
+    "relationships": {"type": "array", "items": {"$ref": "#/$defs/relationship"}}
+  },
+  "$defs": {
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"section": {"type": "string"}, "page": {"type": ["integer", "string"]}, "table": {"type": "string"}, "anchor": {"type": "string"}},
+      "minProperties": 1
+    },
+    "applicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["jurisdictions", "purpose", "conditions"],
+      "properties": {"jurisdictions": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "purpose": {"type": "string", "minLength": 2}, "effective_from": {"type": ["string", "null"]}, "effective_to": {"type": ["string", "null"]}, "conditions": {"type": "array", "items": {"type": "string"}}}
+    },
+    "relationship": {"type": "object", "additionalProperties": false, "required": ["kind", "atom_id"], "properties": {"kind": {"enum": ["supports", "qualifies", "duplicates", "conflicts"]}, "atom_id": {"type": "string"}}}
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB EAD Models"
+  short_description: "Implement selected exposure-at-default models"
+  default_prompt: "Use $matlab-ead-models to implement a selected MATLAB EAD model."

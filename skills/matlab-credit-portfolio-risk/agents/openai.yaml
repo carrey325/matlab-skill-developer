@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Credit Portfolio Risk"
+  short_description: "Implement selected credit portfolio risk calculations"
+  default_prompt: "Use $matlab-credit-portfolio-risk to implement a selected credit portfolio risk calculation."

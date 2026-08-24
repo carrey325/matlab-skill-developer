@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Lifetime PD Models"
+  short_description: "Implement selected lifetime PD model operations"
+  default_prompt: "Use $matlab-lifetime-pd-models to implement a selected MATLAB lifetime PD model."

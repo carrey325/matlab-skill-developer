@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB VaR and ES Estimation"
+  short_description: "Implement selected VaR and ES estimators"
+  default_prompt: "Use $matlab-var-es-estimation to implement a selected MATLAB VaR or ES estimate."

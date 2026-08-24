@@ -1,0 +1,2014 @@
+schema_version: 1.1.0
+library_id: risk-evidence-library
+sources:
+- source_id: BASEL-FRAMEWORK-CURRENT
+  organization: Basel Committee on Banking Supervision
+  title: The Basel Framework
+  version: current-2026-08-23
+  url: https://www.bis.org/baselframework/BaselFramework.pdf
+  source_type: primary_standard_or_regulation
+  publication_date: current-2026-08-23
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:46Z'
+  sha256: b68442b8b7c531dc12cd95fa275b4bee59c00c1715018ac9105919bc1a63d707
+  raw_path: raw/basel-committee-on-banking-supervision/basel-framework-current.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/basel-framework-current.md
+  normalization:
+    status: passed
+    text_characters: 3575764
+    heading_count: 7
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - portfolio-risk
+  - model-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - stress-test-credit-portfolio-workflow
+  - validate-credit-risk-model-workflow
+- source_id: BCBS-CLIMATE-MEASUREMENT-2021
+  organization: Basel Committee on Banking Supervision
+  title: Climate-related financial risks measurement methodologies
+  version: '2021-04-14'
+  url: https://www.bis.org/bcbs/publ/d518.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: '2021-04-14'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:15Z'
+  sha256: 66dea676b90bba06c8f6db592bc3058927758fb76059a3dbd1879372b0a76315
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-climate-measurement-2021.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-climate-measurement-2021.md
+  normalization:
+    status: passed
+    text_characters: 206575
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: &id001
+  - analyze-climate-risk-scenarios-workflow
+- source_id: BCBS-CLIMATE-PRINCIPLES-2022
+  organization: Basel Committee on Banking Supervision
+  title: Principles for effective management and supervision of climate-related financial risks
+  version: '2022-06-15'
+  url: https://www.bis.org/bcbs/publ/d532.pdf
+  source_type: supervisory_guidance
+  publication_date: '2022-06-15'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:10Z'
+  sha256: b9a31ed423932d2868f7fd09a8e7dc7253f5e7d3c6bd0c7a8fb9c51358527cdf
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-climate-principles-2022.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-climate-principles-2022.md
+  normalization:
+    status: passed
+    text_characters: 45877
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: *id001
+- source_id: BCBS-CREDIT-CONCENTRATION-2006
+  organization: Basel Committee on Banking Supervision
+  title: Studies on credit risk concentration
+  version: 2006-11
+  url: https://www.bis.org/publ/bcbs_wp15.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: 2006-11
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:44:59Z'
+  sha256: 4d3be564ede8efec24792be45f9023d005efe2bfa3d4b73468eb94f1558a84d0
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-credit-concentration-2006.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-credit-concentration-2006.md
+  normalization:
+    status: passed
+    text_characters: 114777
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows: &id002
+  - assess-credit-portfolio-risk-workflow
+  - stress-test-credit-portfolio-workflow
+- source_id: BCBS-CREDIT-RISK-MODELLING-1999
+  organization: Basel Committee on Banking Supervision
+  title: Credit risk modelling current practices and applications
+  version: 1999-04
+  url: https://www.bis.org/publ/bcbs49.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: 1999-04
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:44:52Z'
+  sha256: ab95b26b6dd8f5bb75ad10c2f72e014e8c66128898bc0607a982ab093791bce9
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-credit-risk-modelling-1999.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-credit-risk-modelling-1999.md
+  normalization:
+    status: passed
+    text_characters: 142251
+    heading_count: 3
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  - credit-market-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+  - stress-test-credit-portfolio-workflow
+  - model-credit-rating-transitions-workflow
+  - build-credit-curves-workflow
+  - estimate-structural-default-risk-workflow
+- source_id: BCBS-CREDIT-RISK-PRINCIPLES-2025
+  organization: Basel Committee on Banking Supervision
+  title: Principles for the Management of Credit Risk
+  version: '2025-04-30'
+  url: https://www.bis.org/bcbs/publ/d595.pdf
+  source_type: primary_standard_or_regulation
+  publication_date: 2025-04-30
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T04:02:08Z'
+  sha256: c0b498641ef49c348b7e6e293e15516569cbe985beb17f0fc9fdd1cec848cecb
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-credit-risk-principles-2025.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-credit-risk-principles-2025.md
+  normalization:
+    status: passed
+    text_characters: 61097
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - portfolio-risk
+  - model-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - stress-test-credit-portfolio-workflow
+  - validate-credit-risk-model-workflow
+- source_id: BCBS-ECL-GUIDANCE
+  organization: Basel Committee on Banking Supervision
+  title: Guidance on credit risk and accounting for expected credit losses
+  version: 2015-12
+  url: https://www.bis.org/bcbs/publ/d350.pdf
+  source_type: supervisory_guidance
+  publication_date: 2015-12
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:51Z'
+  sha256: 494fae70ac5544377124f6f6d4ea678526b93132d9b1bfb54b4ec8b483b08f95
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-ecl-guidance.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-ecl-guidance.md
+  normalization:
+    status: passed
+    text_characters: 131207
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+- source_id: BCBS-ECONOMIC-CAPITAL-2009
+  organization: Basel Committee on Banking Supervision
+  title: Range of practices and issues in economic capital frameworks
+  version: '2009-03-27'
+  url: https://www.bis.org/publ/bcbs152.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: '2009-03-27'
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:44:56Z'
+  sha256: f5f537c47116facc2f7dff282142a3bda9b2539c6ce966bd9a0b3741ee89da5f
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-economic-capital-2009.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-economic-capital-2009.md
+  normalization:
+    status: passed
+    text_characters: 231371
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows: *id002
+- source_id: BCBS-LARGE-EXPOSURES-2014
+  organization: Basel Committee on Banking Supervision
+  title: Supervisory framework for measuring and controlling large exposures
+  version: '2014-04-15'
+  url: https://www.bis.org/publ/bcbs283.pdf
+  source_type: primary_standard_or_regulation
+  publication_date: '2014-04-15'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:41:49Z'
+  sha256: c5fd9f1584dfe72f02bd24d236bf99c4c54b3d8a30ef9f00b50b33d6c1468b41
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-large-exposures-2014.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-large-exposures-2014.md
+  normalization:
+    status: passed
+    text_characters: 64596
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  - credit-market-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+  - stress-test-credit-portfolio-workflow
+  - analyze-credit-default-swap-risk-workflow
+- source_id: BCBS-MARKET-RISK-2019
+  organization: Basel Committee on Banking Supervision
+  title: Minimum capital requirements for market risk
+  version: '2019-01-14'
+  url: https://www.bis.org/bcbs/publ/d457.pdf
+  source_type: primary_standard_or_regulation
+  publication_date: '2019-01-14'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:41:43Z'
+  sha256: 4b8050428e00a093b4befd5c53372931470b8ef31eb2eec03d7f6c4f232a7fd5
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-market-risk-2019.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-market-risk-2019.md
+  normalization:
+    status: passed
+    text_characters: 404303
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - estimate-var-es-workflow
+  - backtest-var-es-workflow
+- source_id: BCBS-STRESS-TESTING-2018
+  organization: Basel Committee on Banking Supervision
+  title: Stress testing principles
+  version: '2018-10-17'
+  url: https://www.bis.org/bcbs/publ/d450.pdf
+  source_type: supervisory_guidance
+  publication_date: '2018-10-17'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:41:46Z'
+  sha256: 4458fc5a719b9e7198cec54491035134f0be583bc47f9b57821a58dc34259b1a
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-stress-testing-2018.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-stress-testing-2018.md
+  normalization:
+    status: passed
+    text_characters: 37690
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  - market-risk
+  - climate-risk
+  applicable_workflows:
+  - stress-test-credit-portfolio-workflow
+  - estimate-var-es-workflow
+  - backtest-var-es-workflow
+  - analyze-climate-risk-scenarios-workflow
+- source_id: BCBS-VALIDATION-WP14
+  organization: Basel Committee on Banking Supervision
+  title: Studies on the validation of internal rating systems
+  version: 2005-05
+  url: https://www.bis.org/publ/bcbs_wp14.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: 2005-05
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:53Z'
+  sha256: 49cfd1cea68f7e7491f34d97b9660dfb4d4a0b23041868012c835728d9358188
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-validation-wp14.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-validation-wp14.md
+  normalization:
+    status: passed
+    text_characters: 335007
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: BCBS-VAR-BACKTEST-1996
+  organization: Basel Committee on Banking Supervision
+  title: Supervisory framework for backtesting market risk models
+  version: '1996-01-04'
+  url: https://www.bis.org/publ/bcbs22.pdf
+  source_type: supervisory_guidance
+  publication_date: '1996-01-04'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T2
+  official_primary: true
+  status: historical
+  retrieved_at: '2026-08-24T13:41:45Z'
+  sha256: e3dd0e08100ad19dd88f0305cf25c0af5384b5272f2e72aa9c10daa79fd73f28
+  raw_path: raw/basel-committee-on-banking-supervision/bcbs-var-backtest-1996.pdf
+  normalized_path: normalized/basel-committee-on-banking-supervision/bcbs-var-backtest-1996.md
+  normalization:
+    status: passed
+    text_characters: 42247
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - backtest-var-es-workflow
+- source_id: BIAN-SERVICE-LANDSCAPE
+  organization: BIAN
+  title: BIAN Service Landscape
+  version: '2026'
+  url: https://bian.org/deliverables/service-landscape/
+  source_type: banking_architecture_or_business_process
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T3
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:52Z'
+  sha256: 1fc5657fcb189dad433d8a07f2445630d63e75549549bcb66094c2b358c96068
+  raw_path: raw/bian/bian-service-landscape.html
+  normalized_path: normalized/bian/bian-service-landscape.md
+  normalization:
+    status: passed
+    text_characters: 7818
+    heading_count: 19
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  - ecl
+  - portfolio-risk
+  - market-risk
+  - climate-risk
+  applicable_workflows:
+  - analyze-climate-risk-scenarios-workflow
+  - assess-credit-portfolio-risk-workflow
+  - backtest-var-es-workflow
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+  - estimate-var-es-workflow
+  - monitor-credit-risk-model-workflow
+  - stress-test-credit-portfolio-workflow
+  - validate-credit-risk-model-workflow
+- source_id: BIS-PORTFOLIO-CALIBRATION-2007
+  organization: Bank for International Settlements
+  title: Modelling and calibration errors in measures of portfolio credit risk
+  version: '2007-06-28'
+  url: https://www.bis.org/publ/work230.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: '2007-06-28'
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:44:50Z'
+  sha256: fb9cb6fe9aca6104ef4ef8e278c75f05bbd2d8ffb27a6eb2e6e5646ef2004875
+  raw_path: raw/bank-for-international-settlements/bis-portfolio-calibration-2007.pdf
+  normalized_path: normalized/bank-for-international-settlements/bis-portfolio-calibration-2007.md
+  normalization:
+    status: passed
+    text_characters: 122235
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows: *id002
+- source_id: BOE-CLIMATE-SCENARIO-MEASUREMENT-2024
+  organization: Bank of England
+  title: Measuring climate-related financial risks using scenario analysis
+  version: '2024-04-17'
+  url: https://www.bankofengland.co.uk/quarterly-bulletin/2024/2024/measuring-climate-related-financial-risks-using-scenario-analysis
+  source_type: established_academic_or_practitioner
+  publication_date: '2024-04-17'
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T14:14:24Z'
+  sha256: 310b8c110d58029a2e2e21b00e7fb6a0ef29f26e0f93b7c50be1c1c119461f2d
+  raw_path: raw/bank-of-england/boe-climate-scenario-measurement-2024.html
+  normalized_path: normalized/bank-of-england/boe-climate-scenario-measurement-2024.md
+  normalization:
+    status: passed
+    text_characters: 99034
+    heading_count: 78
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows:
+  - analyze-climate-risk-scenarios-workflow
+- source_id: BOE-FILTERED-HISTORICAL-VAR-2015
+  organization: Bank of England
+  title: Filtered historical simulation VaR models and their competitors
+  version: '2015-03-06'
+  url: https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2015/filtered-historical-simulation-value-at-risk-models-and-their-competitors.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: '2015-03-06'
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:44:47Z'
+  sha256: fa25a53c18ddb9a0df28b28a16b5d764bf779c67c2b7c24da08a1783fb043a34
+  raw_path: raw/bank-of-england/boe-filtered-historical-var-2015.pdf
+  normalized_path: normalized/bank-of-england/boe-filtered-historical-var-2015.md
+  normalization:
+    status: passed
+    text_characters: 82457
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - estimate-var-es-workflow
+  - backtest-var-es-workflow
+- source_id: EBA-DEFINITION-OF-DEFAULT-2026
+  organization: European Banking Authority
+  title: Guidelines on the application of the definition of default
+  version: 2026-05
+  url: https://eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-application-definition-default
+  source_type: supervisory_guidance
+  publication_date: 2026-05
+  effective_date: 2026-10-19
+  jurisdiction:
+  - european-union
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T04:02:09Z'
+  sha256: 78bfbc0c2da2693464c790caa54bb22155d560b2313b61799528ddc4c6368ca3
+  raw_path: raw/european-banking-authority/eba-definition-of-default-2026.html
+  normalized_path: normalized/european-banking-authority/eba-definition-of-default-2026.md
+  normalization:
+    status: passed
+    text_characters: 28578
+    heading_count: 16
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: EBA-ENVIRONMENTAL-SCENARIO-2025
+  organization: European Banking Authority
+  title: Guidelines on environmental scenario analysis
+  version: '2025-11-05'
+  url: https://www.eba.europa.eu/sites/default/files/2025-11/170da4c8-9b56-4fb0-ad60-94d433b7e866/Guidelines%20on%20environmental%20scenario%20analysis.pdf
+  source_type: supervisory_guidance
+  publication_date: '2025-11-05'
+  effective_date: '2027-01-01'
+  jurisdiction:
+  - european-union
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:46:49Z'
+  sha256: 1eb8c5e5462cd21294a47a25649e36d567847b9b63b45014423fbc22a961cde8
+  raw_path: raw/european-banking-authority/eba-environmental-scenario-2025.pdf
+  normalized_path: normalized/european-banking-authority/eba-environmental-scenario-2025.md
+  normalization:
+    status: passed
+    text_characters: 202539
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: &id004
+  - analyze-climate-risk-scenarios-workflow
+- source_id: EBA-PD-LGD
+  organization: European Banking Authority
+  title: Guidelines on PD estimation LGD estimation and treatment of defaulted assets
+  version: '2018-04-23'
+  url: https://www.eba.europa.eu/sites/default/files/documents/10180/2192133/f5a2e068-dc4b-4a0e-a10f-378b517ac19c/Guidelines%20on%20PD%20and%20LGD%20estimation%20%28EBA-GL-2017-16%29_EN.pdf?retry=1
+  source_type: supervisory_guidance
+  publication_date: '2018-04-23'
+  effective_date: null
+  jurisdiction:
+  - european-union
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:48Z'
+  sha256: 9f0e0e1d60fd93ed7a43f57c5a81be22a4281d22a421006524411d3d6b6e01c4
+  raw_path: raw/european-banking-authority/eba-pd-lgd.pdf
+  normalized_path: normalized/european-banking-authority/eba-pd-lgd.md
+  normalization:
+    status: passed
+    text_characters: 153592
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: EBA-STRESS-METHODOLOGY-2025
+  organization: European Banking Authority
+  title: 2025 EU-wide stress test methodological note
+  version: '2024-11-11'
+  url: https://www.eba.europa.eu/sites/default/files/2024-11/ee01efca-947b-43ae-b17d-20f9d4314e8e/2025%20EU-wide%20stress%20test%20-%20Methodological%20Note.pdf
+  source_type: supervisory_guidance
+  publication_date: '2024-11-11'
+  effective_date: null
+  jurisdiction:
+  - european-union
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:08Z'
+  sha256: 825122f77abddf4013ef98a6a3cd5834d79865622e03e419fe9d748a5722c31b
+  raw_path: raw/european-banking-authority/eba-stress-methodology-2025.pdf
+  normalized_path: normalized/european-banking-authority/eba-stress-methodology-2025.md
+  normalization:
+    status: passed
+    text_characters: 550132
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  - market-risk
+  applicable_workflows:
+  - stress-test-credit-portfolio-workflow
+  - estimate-var-es-workflow
+  - backtest-var-es-workflow
+- source_id: ECB-INTERNAL-MODELS
+  organization: European Central Bank Banking Supervision
+  title: Guide to internal models
+  version: 2024-02
+  url: https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.supervisory_guides202402_internalmodels.en.pdf
+  source_type: supervisory_guidance
+  publication_date: 2024-02
+  effective_date: null
+  jurisdiction:
+  - european-union
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:50Z'
+  sha256: 811ff29d962110ea4991e576523f85b9cd249031b01aa61949c8554d49d2bdee
+  raw_path: raw/european-central-bank-banking-supervision/ecb-internal-models.pdf
+  normalized_path: normalized/european-central-bank-banking-supervision/ecb-internal-models.md
+  normalization:
+    status: passed
+    text_characters: 776545
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  - portfolio-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - stress-test-credit-portfolio-workflow
+  - validate-credit-risk-model-workflow
+- source_id: FED-CECL-FAQ
+  organization: Board of Governors of the Federal Reserve System
+  title: Frequently Asked Questions on the Current Expected Credit Losses Methodology
+  version: '2019'
+  url: https://www.federalreserve.gov/frrs/guidance/frequently-asked-questions-on-the-current-expected-credit-losses-methodology.htm
+  source_type: supervisory_guidance
+  publication_date: '2019'
+  effective_date: null
+  jurisdiction:
+  - united-states
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:08Z'
+  sha256: ed474a1fe3c02b04e1d5809e262ad994aa14599251bd302d385733becd83c965
+  raw_path: raw/board-of-governors-of-the-federal-reserve-system/fed-cecl-faq.htm
+  normalized_path: normalized/board-of-governors-of-the-federal-reserve-system/fed-cecl-faq.md
+  normalization:
+    status: passed
+    text_characters: 139244
+    heading_count: 5
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - ecl
+  applicable_workflows: &id003
+  - estimate-lifetime-ecl-workflow
+- source_id: FED-CECL-POLICY
+  organization: Board of Governors of the Federal Reserve System
+  title: Interagency Policy Statement on Allowances for Credit Losses
+  version: '2020'
+  url: https://www.federalreserve.gov/frrs/guidance/interagency-policy-statement-on-allowances-for-credit-losses.htm
+  source_type: supervisory_guidance
+  publication_date: '2020'
+  effective_date: null
+  jurisdiction:
+  - united-states
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:08Z'
+  sha256: 6e57026eec3fa27ba07de69e9541d5469589ccc645547bf301cb91528cb52f4d
+  raw_path: raw/board-of-governors-of-the-federal-reserve-system/fed-cecl-policy.htm
+  normalized_path: normalized/board-of-governors-of-the-federal-reserve-system/fed-cecl-policy.md
+  normalization:
+    status: passed
+    text_characters: 88310
+    heading_count: 5
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - ecl
+  applicable_workflows: *id003
+- source_id: FED-SR-26-2
+  organization: Board of Governors of the Federal Reserve System
+  title: Revised Guidance on Model Risk Management (SR 26-2)
+  version: '2026-04-17'
+  url: https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm
+  source_type: supervisory_guidance
+  publication_date: '2026-04-17'
+  effective_date: null
+  jurisdiction:
+  - united-states
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:47Z'
+  sha256: 126d52fa3c963dae28d7dce58fe460a27642f3e41113b9696873f4769c67f040
+  raw_path: raw/board-of-governors-of-the-federal-reserve-system/fed-sr-26-2.htm
+  normalized_path: normalized/board-of-governors-of-the-federal-reserve-system/fed-sr-26-2.md
+  normalization:
+    status: passed
+    text_characters: 21786
+    heading_count: 6
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: FED-STRESS-METHODOLOGY-2025
+  organization: Board of Governors of the Federal Reserve System
+  title: 2025 Supervisory Stress Test Methodology
+  version: 2025-06
+  url: https://www.federalreserve.gov/publications/files/2025-june-supervisory-stress-test-methodology.pdf
+  source_type: supervisory_guidance
+  publication_date: 2025-06
+  effective_date: null
+  jurisdiction:
+  - united-states
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:41:54Z'
+  sha256: 16f3fbd0a295739f40931404aac11adb95f654d3a0c36ef592d75cbd2089a00b
+  raw_path: raw/board-of-governors-of-the-federal-reserve-system/fed-stress-methodology-2025.pdf
+  normalized_path: normalized/board-of-governors-of-the-federal-reserve-system/fed-stress-methodology-2025.md
+  normalization:
+    status: passed
+    text_characters: 273842
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  - model-risk
+  - market-risk
+  applicable_workflows:
+  - stress-test-credit-portfolio-workflow
+  - assess-credit-portfolio-risk-workflow
+  - estimate-var-es-workflow
+  - backtest-var-es-workflow
+- source_id: IFC-DISCRETE-SURVIVAL
+  organization: Irving Fisher Committee on Central Bank Statistics
+  title: Bank failure prediction - a two-step survival time approach
+  version: 2007-08
+  url: https://www.bis.org/ifc/publ/ifcb28h.pdf
+  source_type: established_academic_or_practitioner
+  publication_date: 2007-08
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:55Z'
+  sha256: f524c9b5463c829f7d0457170381843a2b7a4a24df25c29cd9f679ff6b10ee1f
+  raw_path: raw/irving-fisher-committee-on-central-bank-statistics/ifc-discrete-survival.pdf
+  normalized_path: normalized/irving-fisher-committee-on-central-bank-statistics/ifc-discrete-survival.md
+  normalization:
+    status: passed
+    text_characters: 78057
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+- source_id: IFRS-9
+  organization: IFRS Foundation
+  title: IFRS 9 Financial Instruments
+  version: '2014'
+  url: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/
+  source_type: primary_standard_or_regulation
+  publication_date: '2014'
+  effective_date: null
+  jurisdiction:
+  - ifrs
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-23T20:52:47Z'
+  sha256: 0e2c331ef78dee85814b3dc1bc88870c465bb30a0248a938a31ca6be8e04c51c
+  raw_path: raw/ifrs-foundation/ifrs-9.html
+  normalized_path: normalized/ifrs-foundation/ifrs-9.md
+  normalization:
+    status: passed
+    text_characters: 43242
+    heading_count: 34
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+- source_id: IFRS-S1-SUSTAINABILITY-2023
+  organization: IFRS Foundation
+  title: IFRS S1 General Requirements for Disclosure of Sustainability-related Financial Information
+  version: 2023-06
+  url: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards-issb/english/2023/issued/part-a/issb-2023-a-ifrs-s1-general-requirements-for-disclosure-of-sustainability-related-financial-information.pdf?bypass=on
+  source_type: primary_standard_or_regulation
+  publication_date: 2023-06
+  effective_date: '2024-01-01'
+  jurisdiction:
+  - ifrs-sustainability
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:47:41Z'
+  sha256: 896d23dc1f61d1461eab11ee8b70bd3d23f5c16c268bc86c065360baf3768d55
+  raw_path: raw/ifrs-foundation/ifrs-s1-sustainability-2023.pdf
+  normalized_path: normalized/ifrs-foundation/ifrs-s1-sustainability-2023.md
+  normalization:
+    status: passed
+    text_characters: 543
+    heading_count: 2
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows:
+  - analyze-climate-risk-scenarios-workflow
+- source_id: IFRS-S2-CLIMATE-2023
+  organization: IFRS Foundation
+  title: IFRS S2 Climate-related Disclosures
+  version: 2023-06
+  url: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards-issb/english/2023/issued/part-a/issb-2023-a-ifrs-s2-climate-related-disclosures.pdf?bypass=on
+  source_type: primary_standard_or_regulation
+  publication_date: 2023-06
+  effective_date: '2024-01-01'
+  jurisdiction:
+  - ifrs-sustainability
+  authority_tier: T1
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:46:44Z'
+  sha256: 6c6f793521d84000e717c8424e0ce43dfd491e3beca8e73adcc720d914f42b21
+  raw_path: raw/ifrs-foundation/ifrs-s2-climate-2023.pdf
+  normalized_path: normalized/ifrs-foundation/ifrs-s2-climate-2023.md
+  normalization:
+    status: passed
+    text_characters: 543
+    heading_count: 2
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: *id004
+- source_id: ISDA-CDS-DEFINITIONS-2014
+  organization: International Swaps and Derivatives Association
+  title: 2014 ISDA Credit Derivatives Definitions and related material
+  version: '2014-06-30'
+  url: https://www.isda.org/2014/06/30/2014-isda-credit-derivatives-definitions/
+  source_type: banking_architecture_or_business_process
+  publication_date: '2014-06-30'
+  effective_date: null
+  jurisdiction:
+  - international-market
+  authority_tier: T3
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:21Z'
+  sha256: 33e96ee43aeb5a3661b9cbe14b5e21dc7f7834f5b61aa0861e48f4f879efddf0
+  raw_path: raw/international-swaps-and-derivatives-association/isda-cds-definitions-2014.html
+  normalized_path: normalized/international-swaps-and-derivatives-association/isda-cds-definitions-2014.md
+  normalization:
+    status: passed
+    text_characters: 13094
+    heading_count: 12
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - analyze-credit-default-swap-risk-workflow
+- source_id: ISDA-CREDIT-DERIVATIVES-OVERVIEW
+  organization: International Swaps and Derivatives Association
+  title: Credit derivatives overview and market infrastructure
+  version: '2013-10-06'
+  url: https://www.isda.org/2013/10/06/credit-derivatives-overview/
+  source_type: banking_architecture_or_business_process
+  publication_date: '2013-10-06'
+  effective_date: null
+  jurisdiction:
+  - international-market
+  authority_tier: T3
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:23Z'
+  sha256: a99ad94a9eb13e43cdaac563901ec364e78e06da3ef68abe23687068879ed601
+  raw_path: raw/international-swaps-and-derivatives-association/isda-credit-derivatives-overview.html
+  normalized_path: normalized/international-swaps-and-derivatives-association/isda-credit-derivatives-overview.md
+  normalization:
+    status: passed
+    text_characters: 14361
+    heading_count: 12
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - analyze-credit-default-swap-risk-workflow
+  - build-credit-curves-workflow
+- source_id: ISDA-DERIVATIVES-GLOSSARY
+  organization: International Swaps and Derivatives Association
+  title: ISDA derivatives glossary
+  version: current
+  url: https://www.isda.org/1985/01/01/glossary/
+  source_type: banking_architecture_or_business_process
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - international-market
+  authority_tier: T3
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:25Z'
+  sha256: 26a3766cdccfdf9efc95c6328ae27b5eb92f5900c918da3a6d37407ea60e9a09
+  raw_path: raw/international-swaps-and-derivatives-association/isda-derivatives-glossary.html
+  normalized_path: normalized/international-swaps-and-derivatives-association/isda-derivatives-glossary.md
+  normalization:
+    status: passed
+    text_characters: 86705
+    heading_count: 12
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - analyze-credit-default-swap-risk-workflow
+  - build-credit-curves-workflow
+- source_id: MATHWORKS-ASRF
+  organization: MathWorks
+  title: ASRF capital and loss distribution
+  version: current
+  url: https://www.mathworks.com/help/risk/asrf.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:51Z'
+  sha256: 096c510e0f64d9542a85237b28dc60d882ed243259a768fff346f30c76ed4450
+  raw_path: raw/mathworks/mathworks-asrf.html
+  normalized_path: normalized/mathworks/mathworks-asrf.md
+  normalization:
+    status: passed
+    text_characters: 11101
+    heading_count: 23
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+- source_id: MATHWORKS-BASIC-VALIDATION
+  organization: MathWorks
+  title: Basic Lifetime PD Model Validation
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/basic-lifetime-pd-model-validation.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:58Z'
+  sha256: 0f1ae12858379fe8fbf34bcd0dba6256abea90561fb6a261bc4bcc99c7e5f38a
+  raw_path: raw/mathworks/mathworks-basic-validation.html
+  normalized_path: normalized/mathworks/mathworks-basic-validation.md
+  normalization:
+    status: passed
+    text_characters: 9406
+    heading_count: 6
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-BOND-DEFAULT-CURVE
+  organization: MathWorks
+  title: Bootstrap default probability curve from bond prices
+  version: current
+  url: https://www.mathworks.com/help/finance/bonddefaultbootstrap.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:53Z'
+  sha256: 611d11878b26f9f4dba23fa5b9049a037306b37cf457a46e296f2e3fc68367fb
+  raw_path: raw/mathworks/mathworks-bond-default-curve.html
+  normalized_path: normalized/mathworks/mathworks-bond-default-curve.md
+  normalization:
+    status: passed
+    text_characters: 29784
+    heading_count: 36
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - build-credit-curves-workflow
+- source_id: MATHWORKS-CDS-PRICE
+  organization: MathWorks
+  title: Price credit default swaps
+  version: current
+  url: https://www.mathworks.com/help/finance/cdsprice.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:55Z'
+  sha256: e8a41ff5cf0848c9cc683ab0a7e2d1647c946723d812ba3d3875982e0c27ffe0
+  raw_path: raw/mathworks/mathworks-cds-price.html
+  normalized_path: normalized/mathworks/mathworks-cds-price.md
+  normalization:
+    status: passed
+    text_characters: 19949
+    heading_count: 37
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - analyze-credit-default-swap-risk-workflow
+- source_id: MATHWORKS-CDS-SPREAD
+  organization: MathWorks
+  title: Compute credit default swap spread
+  version: current
+  url: https://www.mathworks.com/help/finance/cdsspread.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:56Z'
+  sha256: fb342e29abd659ae4dda482a233268b230ea1f5749cd49f4a485b4f778bef99c
+  raw_path: raw/mathworks/mathworks-cds-spread.html
+  normalized_path: normalized/mathworks/mathworks-cds-spread.md
+  normalization:
+    status: passed
+    text_characters: 18276
+    heading_count: 33
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - analyze-credit-default-swap-risk-workflow
+- source_id: MATHWORKS-CHAMPION-CHALLENGER
+  organization: MathWorks
+  title: Compare Logistic Lifetime PD Model to Champion Model
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/compare-logistic-lifetime-pd-model-to-champion-model.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:58Z'
+  sha256: e5eab30c6028c7ab38f3523e0080ce22759f16f9439cb6b6e479f5d7df2c1da8
+  raw_path: raw/mathworks/mathworks-champion-challenger.html
+  normalized_path: normalized/mathworks/mathworks-champion-challenger.md
+  normalization:
+    status: passed
+    text_characters: 24667
+    heading_count: 10
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-CLIMATE-SCENARIO
+  organization: MathWorks
+  title: ClimateScenario object
+  version: current
+  url: https://www.mathworks.com/help/risk/climatescenario.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:59Z'
+  sha256: a1955740adfe04146508f333291e3b93e92788653227db8ad4d611fff39b1244
+  raw_path: raw/mathworks/mathworks-climate-scenario.html
+  normalized_path: normalized/mathworks/mathworks-climate-scenario.md
+  normalization:
+    status: passed
+    text_characters: 16815
+    heading_count: 28
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: &id005
+  - analyze-climate-risk-scenarios-workflow
+- source_id: MATHWORKS-CLIMATE-SHOCK
+  organization: MathWorks
+  title: Shock climate scenario variables
+  version: current
+  url: https://www.mathworks.com/help/risk/climatescenario.shockvariables.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:43:00Z'
+  sha256: 485f888075b101f79d23dc333272dc5df5a2064cd2f07b3a1c3e8a94ec633142
+  raw_path: raw/mathworks/mathworks-climate-shock.html
+  normalized_path: normalized/mathworks/mathworks-climate-shock.md
+  normalization:
+    status: passed
+    text_characters: 13451
+    heading_count: 17
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: *id005
+- source_id: MATHWORKS-CONCENTRATION-INDICES
+  organization: MathWorks
+  title: Credit portfolio concentration indices
+  version: current
+  url: https://www.mathworks.com/help/risk/concentrationindices.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:52Z'
+  sha256: af66a480012ca224f3552d35c3d50b3e1b7aae4090770dcaf0ef611c8dbc3068
+  raw_path: raw/mathworks/mathworks-concentration-indices.html
+  normalized_path: normalized/mathworks/mathworks-concentration-indices.md
+  normalization:
+    status: passed
+    text_characters: 25968
+    heading_count: 36
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows: &id006
+  - assess-credit-portfolio-risk-workflow
+  - stress-test-credit-portfolio-workflow
+- source_id: MATHWORKS-COX-ECL
+  organization: MathWorks
+  title: Compute Expected Credit Loss for Lifetime PD Model
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/compute-expected-credit-loss-for-lifetime-pd-model.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:59Z'
+  sha256: 62264fb72a1edb9c94633ea4466652b18c8f2a1708155aa9c43a05db14566219
+  raw_path: raw/mathworks/mathworks-cox-ecl.html
+  normalized_path: normalized/mathworks/mathworks-cox-ecl.md
+  normalization:
+    status: passed
+    text_characters: 15349
+    heading_count: 7
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+- source_id: MATHWORKS-CREDIT-DEFAULT-COPULA
+  organization: MathWorks
+  title: creditDefaultCopula model
+  version: current
+  url: https://www.mathworks.com/help/risk/creditdefaultcopula.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:50Z'
+  sha256: 96a370d852bff64cd5d2c763ef9fdfbc99969aa6f3c9ba2038f05117b23734a1
+  raw_path: raw/mathworks/mathworks-credit-default-copula.html
+  normalized_path: normalized/mathworks/mathworks-credit-default-copula.md
+  normalization:
+    status: passed
+    text_characters: 25256
+    heading_count: 32
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows: *id006
+- source_id: MATHWORKS-CREDIT-MIGRATION-COPULA
+  organization: MathWorks
+  title: creditMigrationCopula model
+  version: current
+  url: https://www.mathworks.com/help/risk/creditmigrationcopula.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:51Z'
+  sha256: b75b2f504dfad6888eb9bdb24876519e6bd51533a4ef3469d9478b12c5533c35
+  raw_path: raw/mathworks/mathworks-credit-migration-copula.html
+  normalized_path: normalized/mathworks/mathworks-credit-migration-copula.md
+  normalization:
+    status: passed
+    text_characters: 36999
+    heading_count: 37
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - portfolio-risk
+  applicable_workflows:
+  - assess-credit-portfolio-risk-workflow
+  - model-credit-rating-transitions-workflow
+- source_id: MATHWORKS-CREDITSCORECARD
+  organization: MathWorks
+  title: creditscorecard
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/finance/creditscorecard.html
+  source_type: vendor_documentation_or_examples
+  publication_date: 2026
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T04:02:11Z'
+  sha256: 006f8ed118a50cd11a65edba60c840ab335ea74f501c909eb0f15802dccd6b00
+  raw_path: raw/mathworks/mathworks-creditscorecard.html
+  normalized_path: normalized/mathworks/mathworks-creditscorecard.md
+  normalization:
+    status: passed
+    text_characters: 43804
+    heading_count: 44
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-CROSS-VALIDATION
+  organization: MathWorks
+  title: Compare Lifetime PD Models Using Cross-Validation
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/compare-lifetime-pd-models-using-cross-validation.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:59Z'
+  sha256: de0302600599147dc328c204169f34f0cbff2f342ab82c78f7c067330c1f888a
+  raw_path: raw/mathworks/mathworks-cross-validation.html
+  normalized_path: normalized/mathworks/mathworks-cross-validation.md
+  normalization:
+    status: passed
+    text_characters: 10017
+    heading_count: 6
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-ES-BACKTEST-WORKFLOW
+  organization: MathWorks
+  title: Expected shortfall estimation and backtesting
+  version: current
+  url: https://www.mathworks.com/help/risk/expected-shortfall-estimation-and-backtesting-1.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:58Z'
+  sha256: a046e1e6069ad95f8ac0e311d757c5da518862f824eead9f775e1d65eb25121e
+  raw_path: raw/mathworks/mathworks-es-backtest-workflow.html
+  normalized_path: normalized/mathworks/mathworks-es-backtest-workflow.md
+  normalization:
+    status: passed
+    text_characters: 59003
+    heading_count: 11
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - estimate-var-es-workflow
+  - backtest-var-es-workflow
+- source_id: MATHWORKS-EXPECTED-SHORTFALL
+  organization: MathWorks
+  title: Compute expected shortfall values
+  version: current
+  url: https://www.mathworks.com/help/risk/expectedshortfall.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:57Z'
+  sha256: e310af375be724ae1d3ad84eaa673bc92b088fbbd207b73af1e5bb0dbec25bb1
+  raw_path: raw/mathworks/mathworks-expected-shortfall.html
+  normalized_path: normalized/mathworks/mathworks-expected-shortfall.md
+  normalization:
+    status: passed
+    text_characters: 15369
+    heading_count: 25
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - estimate-var-es-workflow
+- source_id: MATHWORKS-FIT-EAD
+  organization: MathWorks
+  title: fitEADModel
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/fiteadmodel.html
+  source_type: vendor_documentation_or_examples
+  publication_date: 2026
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T04:02:11Z'
+  sha256: 269ad4b059bcc30fd1da47bacaf5ca1cdaa9297fce25f03517aa536139c7ee4f
+  raw_path: raw/mathworks/mathworks-fit-ead.html
+  normalized_path: normalized/mathworks/mathworks-fit-ead.md
+  normalization:
+    status: passed
+    text_characters: 15766
+    heading_count: 17
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-FIT-LGD
+  organization: MathWorks
+  title: fitLGDModel
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/fitlgdmodel.html
+  source_type: vendor_documentation_or_examples
+  publication_date: 2026
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T04:02:09Z'
+  sha256: 76cebcae0984288197d6699e4d49241323060f5e75576573c1a82f8a88de365d
+  raw_path: raw/mathworks/mathworks-fit-lgd.html
+  normalized_path: normalized/mathworks/mathworks-fit-lgd.md
+  normalization:
+    status: passed
+    text_characters: 13674
+    heading_count: 17
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-FIT-LIFETIME-PD
+  organization: MathWorks
+  title: fitLifetimePDModel
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/fitlifetimepdmodel.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:56Z'
+  sha256: c222a914603e10f57098117fde35cbad637d5c5c98b8f952da8c6a92508bcbcc
+  raw_path: raw/mathworks/mathworks-fit-lifetime-pd.html
+  normalized_path: normalized/mathworks/mathworks-fit-lifetime-pd.md
+  normalization:
+    status: passed
+    text_characters: 17193
+    heading_count: 16
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+- source_id: MATHWORKS-LGD-COMPARISON
+  organization: MathWorks
+  title: Model Loss Given Default
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/comparing-lgd-models.html
+  source_type: vendor_documentation_or_examples
+  publication_date: 2026
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T04:02:10Z'
+  sha256: 8934b01acf1535516e028935877a1f78efd3b877306163a9ab66cd1b0e891339
+  raw_path: raw/mathworks/mathworks-lgd-comparison.html
+  normalized_path: normalized/mathworks/mathworks-lgd-comparison.md
+  normalization:
+    status: passed
+    text_characters: 56001
+    heading_count: 12
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-LGD-OVERVIEW
+  organization: MathWorks
+  title: Overview of Loss Given Default Models
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/overview-of-loss-given-default.html
+  source_type: vendor_documentation_or_examples
+  publication_date: 2026
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T04:02:10Z'
+  sha256: f4f81d17b8e57026370f03f30c860007b06af36c34d8ce2959e918362a274097
+  raw_path: raw/mathworks/mathworks-lgd-overview.html
+  normalized_path: normalized/mathworks/mathworks-lgd-overview.md
+  normalization:
+    status: passed
+    text_characters: 13860
+    heading_count: 6
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-MERTON-MODEL
+  organization: MathWorks
+  title: Merton structural default model
+  version: current
+  url: https://www.mathworks.com/help/risk/mertonmodel.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:54Z'
+  sha256: dcf05bcc41087a164bad1a432fff15a0d86370b7cf2203d27a24b0576c694a80
+  raw_path: raw/mathworks/mathworks-merton-model.html
+  normalized_path: normalized/mathworks/mathworks-merton-model.md
+  normalization:
+    status: passed
+    text_characters: 12388
+    heading_count: 28
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - estimate-structural-default-risk-workflow
+- source_id: MATHWORKS-MERTON-TIME-SERIES
+  organization: MathWorks
+  title: Merton model by time series
+  version: current
+  url: https://www.mathworks.com/help/risk/mertonbytimeseries.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:55Z'
+  sha256: 5fa895365c5e1cf322084e0905f9b9106b0a019992eba3b4eb8b39dc9f49c4cc
+  raw_path: raw/mathworks/mathworks-merton-time-series.html
+  normalized_path: normalized/mathworks/mathworks-merton-time-series.md
+  normalization:
+    status: passed
+    text_characters: 13023
+    heading_count: 29
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - estimate-structural-default-risk-workflow
+- source_id: MATHWORKS-PD-CALIBRATION
+  organization: MathWorks
+  title: modelCalibration for Lifetime PD Models
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/risk.credit.pd.logistic.modelcalibration.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:57Z'
+  sha256: 7ac2e5e79999a750750e4bdfea5f4778f3a5a662473babab0401ba0f4f2e8278
+  raw_path: raw/mathworks/mathworks-pd-calibration.html
+  normalized_path: normalized/mathworks/mathworks-pd-calibration.md
+  normalization:
+    status: passed
+    text_characters: 24986
+    heading_count: 24
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-PD-DISCRIMINATION
+  organization: MathWorks
+  title: modelDiscrimination for Lifetime PD Models
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/risk.credit.pd.logistic.modeldiscrimination.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:57Z'
+  sha256: 140d5a0775a6f93f09cdfb26cf04635d5b933cf60b3d878542c32cdb0e11b17e
+  raw_path: raw/mathworks/mathworks-pd-discrimination.html
+  normalized_path: normalized/mathworks/mathworks-pd-discrimination.md
+  normalization:
+    status: passed
+    text_characters: 23718
+    heading_count: 27
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-SCORECARD-WORKFLOW
+  organization: MathWorks
+  title: Credit Scorecard Modeling Workflow
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/finance/credit-scorecard-modeling-workflow.html
+  source_type: vendor_documentation_or_examples
+  publication_date: 2026
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T04:02:11Z'
+  sha256: a2f8824339e76a3fc78f292f47ca5bd9d9755d94f100f70965de6bd8f5282316
+  raw_path: raw/mathworks/mathworks-scorecard-workflow.html
+  normalized_path: normalized/mathworks/mathworks-scorecard-workflow.md
+  normalization:
+    status: passed
+    text_characters: 13645
+    heading_count: 4
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: MATHWORKS-TRANSITION-PROBABILITIES
+  organization: MathWorks
+  title: Estimate transition probability matrix
+  version: current
+  url: https://www.mathworks.com/help/finance/transprob.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:53Z'
+  sha256: 7af9426955a0cbd4003aa4742463c981a8b051227635959da355fdaf4172458d
+  raw_path: raw/mathworks/mathworks-transition-probabilities.html
+  normalized_path: normalized/mathworks/mathworks-transition-probabilities.md
+  normalization:
+    status: passed
+    text_characters: 71862
+    heading_count: 37
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-market-risk
+  applicable_workflows:
+  - model-credit-rating-transitions-workflow
+- source_id: MATHWORKS-TTC-PIT
+  organization: MathWorks
+  title: Compare Probability of Default Using Through-the-Cycle and Point-in-Time Models
+  version: '2026'
+  url: https://ww2.mathworks.cn/help/risk/compare-pd-using-ttc-and-pit-models.html
+  source_type: vendor_documentation_or_examples
+  publication_date: '2026'
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:58Z'
+  sha256: aa8e761e6bdfd497be90e3239c92b7e9ffcf2e36af842c54cb319ccd5a5ddb8a
+  raw_path: raw/mathworks/mathworks-ttc-pit.html
+  normalized_path: normalized/mathworks/mathworks-ttc-pit.md
+  normalization:
+    status: passed
+    text_characters: 29441
+    heading_count: 9
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - ecl
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-lifetime-ecl-workflow
+- source_id: MATHWORKS-VALUE-AT-RISK
+  organization: MathWorks
+  title: Compute value at risk values
+  version: current
+  url: https://www.mathworks.com/help/risk/valueatrisk.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:56Z'
+  sha256: 9bde7e64c1c270426bbc5068a0e1d2ad06437b00968fcad72c2c1c3579924fb3
+  raw_path: raw/mathworks/mathworks-value-at-risk.html
+  normalized_path: normalized/mathworks/mathworks-value-at-risk.md
+  normalization:
+    status: passed
+    text_characters: 14024
+    heading_count: 23
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - estimate-var-es-workflow
+- source_id: MATHWORKS-VAR-BACKTEST-WORKFLOW
+  organization: MathWorks
+  title: VaR backtesting workflow
+  version: current
+  url: https://www.mathworks.com/help/risk/var-backtesting-workflow-example.html
+  source_type: vendor_documentation_or_examples
+  publication_date: current
+  effective_date: null
+  jurisdiction:
+  - implementation
+  authority_tier: T5
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-24T13:42:58Z'
+  sha256: 46295776e0318f1dc0cad533460e97babbc7bc185953572e5311b6559385fd9e
+  raw_path: raw/mathworks/mathworks-var-backtest-workflow.html
+  normalized_path: normalized/mathworks/mathworks-var-backtest-workflow.md
+  normalization:
+    status: passed
+    text_characters: 14461
+    heading_count: 14
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - market-risk
+  applicable_workflows:
+  - backtest-var-es-workflow
+- source_id: NGFS-SCENARIO-GUIDE-2025
+  organization: Network for Greening the Financial System
+  title: Guide to climate scenario analysis for central banks and supervisors 2025
+  version: '2025-11-19'
+  url: https://www.ngfs.net/system/files/2025-11/Guide%20to%20climate%20scenario%20analysis%20for%20central%20banks%20and%20supervisors%20%E2%80%93%20Update_0.pdf
+  source_type: supervisory_guidance
+  publication_date: '2025-11-19'
+  effective_date: null
+  jurisdiction:
+  - international
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T13:42:20Z'
+  sha256: da155828f9ad403ce3e1091d10194846f1cc3f1b886601b812da434fcc362168
+  raw_path: raw/network-for-greening-the-financial-system/ngfs-scenario-guide-2025.pdf
+  normalized_path: normalized/network-for-greening-the-financial-system/ngfs-scenario-guide-2025.md
+  normalization:
+    status: passed
+    text_characters: 202863
+    heading_count: 0
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - climate-risk
+  applicable_workflows: *id001
+- source_id: OCC-MRM-2026
+  organization: Office of the Comptroller of the Currency
+  title: Model Risk Management Revised Guidance
+  version: '2026-04-17'
+  url: https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-13.html
+  source_type: supervisory_guidance
+  publication_date: 2026-04-17
+  effective_date: null
+  jurisdiction:
+  - united-states
+  authority_tier: T2
+  official_primary: true
+  status: current
+  retrieved_at: '2026-08-24T04:02:08Z'
+  sha256: d9b21c06b2b23871d56c7daa1da2cc8d7c0c6b60820567dd60ffdc8ce2df2715
+  raw_path: raw/office-of-the-comptroller-of-the-currency/occ-mrm-2026.html
+  normalized_path: normalized/office-of-the-comptroller-of-the-currency/occ-mrm-2026.md
+  normalization:
+    status: passed
+    text_characters: 22715
+    heading_count: 11
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  - model-risk
+  - market-risk
+  applicable_workflows:
+  - backtest-var-es-workflow
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow
+  - estimate-var-es-workflow
+  - monitor-credit-risk-model-workflow
+  - validate-credit-risk-model-workflow
+- source_id: RBA-SURVIVAL-METHODS
+  organization: Reserve Bank of Australia
+  title: Why Do Companies Fail - Modelling Approach
+  version: '2016'
+  url: https://www.rba.gov.au/publications/rdp/2016/2016-09/modelling-approach.html
+  source_type: established_academic_or_practitioner
+  publication_date: '2016'
+  effective_date: null
+  jurisdiction:
+  - methodology
+  authority_tier: T4
+  official_primary: false
+  status: current
+  retrieved_at: '2026-08-23T20:52:56Z'
+  sha256: a6c0dacffadb70a77e26607f27d0bdde4701975345c11dd2e8da1783231d8132
+  raw_path: raw/reserve-bank-of-australia/rba-survival-methods.html
+  normalized_path: normalized/reserve-bank-of-australia/rba-survival-methods.md
+  normalization:
+    status: passed
+    text_characters: 14602
+    heading_count: 8
+    duplicate_of: null
+    quality_flags: []
+  topics:
+  - credit-risk
+  applicable_workflows:
+  - develop-credit-default-model-workflow
+  - develop-credit-scorecard-workflow
+  - develop-ead-workflow
+  - develop-lgd-workflow
+  - develop-lifetime-pd-workflow

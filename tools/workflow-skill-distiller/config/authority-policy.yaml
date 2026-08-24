@@ -1,0 +1,13 @@
+schema_version: "1.0.0"
+tiers:
+  T1: law_accounting_standard_or_regulatory_rule
+  T2: supervisory_or_regulator_guidance
+  T3: industry_architecture_or_professional_standard
+  T4: established_academic_or_practitioner_methodology
+  T5: vendor_documentation
+  T6: worked_example_tutorial_or_community_material
+conflict_precedence:
+  - applicability
+  - authority
+  - currentness
+  - specificity

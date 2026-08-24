@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB Credit Default Swaps"
+  short_description: "Implement selected CDS prices and credit spreads"
+  default_prompt: "Use $matlab-credit-default-swaps to implement a selected MATLAB CDS valuation."

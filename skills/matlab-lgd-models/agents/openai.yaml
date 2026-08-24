@@ -1,0 +1,4 @@
+interface:
+  display_name: "MATLAB LGD Models"
+  short_description: "Implement selected loss-given-default models"
+  default_prompt: "Use $matlab-lgd-models to implement a selected MATLAB LGD model."

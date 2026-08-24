@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brinson Workflow"
+  short_description: "Plan and review Brinson performance attribution"
+  default_prompt: "Use $brinson-workflow to plan this Brinson attribution and produce an implementation brief."
